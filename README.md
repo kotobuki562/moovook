@@ -77,7 +77,6 @@ MooVooK を利用することで、継続した読書習慣を得られます。
 | name     | string | null: false |
 | email    | string | nill: false |
 | password | string | nill: false |
-| birthday | date   | nill: false |
 
 has_many: posts
 has_many: likes
@@ -91,7 +90,8 @@ has_many: comments
 | --------------- | ------------- | ----------------------------- |
 | book_name       | string        | nill: false                   |
 | category_id     | integer       | nill: false                   |
-| text            | text          | nill: false                   |
+| wrap_up         | text          | nill: false                   |
+| impressions     | text          | nill: false                   |
 | action_plan     | text          | nill: false                   |
 | --------------- | ------------- | ------------                  |
 | user            | references    | nill: false,foreign_key: true |
