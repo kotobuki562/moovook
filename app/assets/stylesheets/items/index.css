@@ -1,0 +1,19 @@
+.contents{
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  padding-top: 6%;
+}
+
+.content{
+  margin: 20px;
+  width: 200px;
+  height: 400px;
+}
+
+.book-name{
+  font-size: 16px;
+}
+.user-name{
+  font-size: 16px;
+}

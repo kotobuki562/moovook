@@ -1,1 +1,16 @@
-<h1>welcom MooVooK!<h1>
+<div class="wrap">
+  <h1>welcom MooVooK!<h1>
+  <ul class="contents">
+  <% @posts.each do |post| %>
+    <li class="content" id="book-content">
+      <%= image_tag(post.image,size: '180x250') %>
+      <div class="book-name">
+      <%= post.book_name %>
+      </div>
+      <div class="user-name">
+      <%= post.user.name %>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+</div>
