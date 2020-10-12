@@ -4,10 +4,10 @@
   <% @posts.each do |post| %>
     <li class="content" id="book-content">
       <%= image_tag(post.image,size: '180x250') %>
-      <div>
+      <div class="book-name">
       <%= post.book_name %>
       </div>
-      <div>
+      <div class="user-name">
       <%= post.user.name %>
       </div>
     </li>
