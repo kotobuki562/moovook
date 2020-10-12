@@ -3,9 +3,10 @@
     <%= f.label :book_name, "本のタイトル名" %><br />
     <%= f.text_field :book_name %>
   </div>
-
+  
+  <%= "本のカテゴリー" %>
   <div class="field">
-    <%# <%= f.collection_select(:category_id, Category.all , :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+    <%= f.collection_select(:category_id, Category.all , :id, :name, {}, {class:"select-box", id:"item-category"}) %>
   </div>
 
   <div class="field">
