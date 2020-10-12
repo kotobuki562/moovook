@@ -18,19 +18,31 @@
 @charset "UTF-8";
 
 body{
-  background-color: whitesmoke;
+  background-color: #f4f2e1;
 }
 
 .wrap{
   width: 100vw;
-  padding: 0px 20px;
+  padding: 0px 50px;
+}
+
+.header{
+  height: 100%;
+  margin-bottom: 10px;
+  background-color: #37A48E;
+}
+
+.header__bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .btn{
+  font-size: 20px;
   margin: 5px 8px;
   color: #f2efcd;
-  background-color: #37A48E;
+  background-color: #72baac;
   padding: 5px 8px;
   border-radius: 5px;
-  box-shadow: 3px 3px 3px  rgb(55, 164, 142, 0.8);
 }
