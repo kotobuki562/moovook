@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+@charset "UTF-8";
+
+.wrap{
+  width: 100vw;
+  padding: 0px 20px;
+}
