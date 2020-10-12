@@ -18,13 +18,13 @@
           <%= link_to image_tag('logo.png' , size: '150x100'), "/" %>
           <% if user_signed_in? %>
             <div class="user_nav grid-6">
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-              <%= link_to "投稿する", new_post_path, class: "post" %>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"btn logout" %>
+              <%= link_to "投稿する", new_post_path, class:"btn post" %>
             </div>
           <% else %>
             <div class="grid-6">
-              <%= link_to "ログイン", new_user_session_path, class: "post" %>
-              <%= link_to "新規登録", new_user_registration_path, class: "post" %>
+              <%= link_to "ログイン", new_user_session_path, class:"btn login" %>
+              <%= link_to "新規登録", new_user_registration_path, class:"btn signin" %>
             </div>
           <% end %>
         </div>

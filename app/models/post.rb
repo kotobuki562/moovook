@@ -7,15 +7,13 @@ class Post < ApplicationRecord
     validates :book_name, length: { maximum: 50 }
     validates :category_id, numericality: { other_than: 1 }
 
-    with_options length: {maximum: 1000} do
+    with_options length: { maximum: 1000 } do
       validates :wrap_up
       validates :impressions
       validates :action_plan
-      
     end
   end
 
   belongs_to :user
   has_one_attached :image
-  
 end

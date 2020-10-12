@@ -13,9 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+ /* 共通事項 */
 @charset "UTF-8";
+
+body{
+  background-color: whitesmoke;
+}
 
 .wrap{
   width: 100vw;
   padding: 0px 20px;
+}
+
+.btn{
+  margin: 5px 8px;
+  color: #f2efcd;
+  background-color: #37A48E;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px  rgb(55, 164, 142, 0.8);
 }

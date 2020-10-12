@@ -6,6 +6,7 @@
 }
 
 .content{
+  text-align: center;
   margin: 20px;
   width: 200px;
   height: 400px;
@@ -15,5 +16,9 @@
   font-size: 16px;
 }
 .user-name{
+  font-size: 16px;
+}
+
+.category-name{
   font-size: 16px;
 }
