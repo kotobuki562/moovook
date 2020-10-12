@@ -4,11 +4,15 @@ class Post < ApplicationRecord
 
   with_options presence: true do
     validates :image
-    validates :book_name
+    validates :book_name, length: { maximum: 50 }
     validates :category_id, numericality: { other_than: 1 }
-    validates :wrap_up
-    validates :impressions
-    validates :action_plan
+
+    with_options length: {maximum: 1000} do
+      validates :wrap_up
+      validates :impressions
+      validates :action_plan
+      
+    end
   end
 
   belongs_to :user
