@@ -2,7 +2,7 @@
   <ul class="contents">
   <% @posts.each do |post| %>
     <li class="content" id="book-content">
-      <%= image_tag(post.image,size: '180x250') %>
+      <%= link_to image_tag(post.image,size: '180x250'), post_path(post.id),method: :get %>
       <div class="book-name">
       <%= post.book_name %>
       </div>
