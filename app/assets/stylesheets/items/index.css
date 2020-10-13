@@ -3,7 +3,7 @@
   overflow: auto;
   display: grid;
   gap: 26px;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding-top: 6%;
 }
 
@@ -14,8 +14,6 @@
   text-align: center;
   padding: 20px 15px 0 15px;
   margin: 20px;
-  width: calc(100% - 30px);
-  height: calc(100% - 40px);
   box-shadow: 5px 5px 5px 2px rgba(55, 164, 142, 0.5);
 }
 
