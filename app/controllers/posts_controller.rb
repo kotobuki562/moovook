@@ -32,8 +32,10 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.update(post_params)
     if @post.save
+      flash[:notice] = "編集成功！"
       redirect_to post_path
     else
+      flash[:notice] = "編集できませんでした"
       render :edit
     end
   end
@@ -41,8 +43,10 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     if @post.destroy
+      flash[:notice] = "投稿を削除しました"
       redirect_to root_path
     else
+      flash[:notice] = "投稿削除に失敗しました"
       render :show
     end
   end
