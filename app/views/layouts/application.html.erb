@@ -18,6 +18,7 @@
             <%= link_to image_tag('logo.png' , size: '150x100'), "/" %>
             <% if user_signed_in? %>
               <div class="user_nav grid-6">
+                <%= link_to "マイページ", user_path(current_user.id),method: :get, class:"btn mypage" %>
                 <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"btn logout" %>
                 <%= link_to "投稿する", new_post_path, class:"btn post" %>
               </div>
