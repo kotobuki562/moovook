@@ -29,6 +29,22 @@ class PostsController < ApplicationController
   end
 
   def update
+    @post = Post.find(params[:id])
+    @post.update(post_params)
+    if @post.save
+      redirect_to post_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    if @post.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
   end
 
   private
