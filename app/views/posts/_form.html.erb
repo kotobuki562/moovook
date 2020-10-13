@@ -1,0 +1,36 @@
+<%= form_with(model: @post, local: true) do |f|%>
+<%= render 'shared/error_messages', model: f.object %>
+  <div class="field">
+    <%= f.label :book_name, "本のタイトル名" %><br />
+    <%= f.text_field :book_name %>
+  </div>
+  
+  <%= "本のカテゴリー" %>
+  <div class="field">
+    <%= f.collection_select(:category_id, Category.all , :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :wrap_up, "本を読んでの感想" %><br />
+    <%= f.text_area :wrap_up, class: :form__text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :impressions, "本の要約" %><br />
+    <%= f.text_area :impressions, class: :form__text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :action_plan, "本を読んでのアクションプラン" %><br />
+    <%= f.text_area :action_plan, class: :form__text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "本の表紙画像" %><br />
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
