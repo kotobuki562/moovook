@@ -1,4 +1,8 @@
 <div class="wrap">
+  <ul>
+    <li><%= link_to "編集",edit_post_path(@post.id),method: :get  %></li>
+    <li><%= link_to "削除",post_path(@post.id),method: :delete %></li>
+  </ul>
   <div>
     <%= @post.book_name %>
   </div>
@@ -15,7 +19,7 @@
     <%= @post.impressions %>
   </div>
   <div>
-    <%= image_tag(@post.image) %>
+    <%= image_tag(@post.image,size: '400x600') %>
   </div>
   <div>
     <%= @post.action_plan %>

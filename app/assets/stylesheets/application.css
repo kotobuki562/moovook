@@ -28,7 +28,6 @@ body{
 
 .header{
   height: 100%;
-  margin-bottom: 10px;
   background-color: #37A48E;
 }
 
@@ -45,4 +44,13 @@ body{
   background-color: #72baac;
   padding: 5px 8px;
   border-radius: 5px;
+}
+
+.flash{
+  padding: 10px 0px;
+  margin: 0;
+  color: #f2efcd;
+  font-size: 20px;
+  text-align: center;
+  background-color: #D16E5B;
 }
