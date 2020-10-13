@@ -1,4 +1,8 @@
 <div class="wrap">
+  <ul>
+    <li><%= link_to "編集",edit_post_path(@post.id),method: :get  %></li>
+    <li><%= link_to "削除","#" %></li>
+  </ul>
   <div>
     <%= @post.book_name %>
   </div>
