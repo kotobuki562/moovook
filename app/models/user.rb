@@ -14,6 +14,9 @@ class User < ApplicationRecord
     has_many :posts
     has_many :comments
     has_many :likes
-    has_many :like_posts, through: :likes, source: :post
+
+    def liked_by?(post_id)
+      likes.where(post_id: post_id).exists?
+    end
 
 end
