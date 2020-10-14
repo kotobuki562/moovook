@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!,except: [:index,:show]
   before_action :move_to_index, except: [:index, :show]
   before_action :post_set, only: [:show,:edit,:update,:destroy]
   before_action :move_to_index_another_user, only:[:edit,:update,:destroy]
+  # before_action :liked_by?
 
   def index
     @posts = Post.includes(:user).order('created_at DESC')
@@ -14,6 +14,18 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    # @post.user_id = current_user.id
+
+    # respond_to do |format|
+    #   if @post.save
+    #     format.html { redirect_to @post, notice: 'Post was successfully created.' }
+    #     format.json { render :show, status: :created, location: @post }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @post.errors, status: :unprocessable_entity }
+    #   end
+    # end
+    
     if @post.save
       redirect_to root_path
     else
@@ -70,6 +82,10 @@ class PostsController < ApplicationController
       redirect_to action: :index
     end
   end
+
+  # def liked_by?(post_id)
+  #   likes.where(post_id: post_id).exists?
+  # end
 
   def post_params
     params.require(:post).permit(:image, :book_name, :category_id, :wrap_up, :impressions, :action_plan).merge(user_id: current_user.id)
