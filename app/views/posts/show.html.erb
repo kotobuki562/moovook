@@ -1,29 +1,52 @@
 <div class="wrap">
-<% if user_signed_in? && @post.user.id == current_user.id %>
-  <ul>
-    <li><%= link_to "編集",edit_post_path(@post.id),method: :get  %></li>
-    <li><%= link_to "削除",post_path(@post.id),method: :delete %></li>
+  <% if user_signed_in? && @post.user.id == current_user.id %>
+    <ul>
+      <li><%= link_to "編集",edit_post_path(@post.id),method: :get  %></li>
+      <li><%= link_to "削除",post_path(@post.id),method: :delete %></li>
+    </ul>
+  <% end %>
+    <div>
+      <%= @post.book_name %>
+    </div>
+    <div>
+      <%= @post.user.name %>
+    </div>
+    <div>
+      <%= @post.category.name %>
+    </div>
+    <div>
+      <%= @post.wrap_up %>
+    </div>
+    <div>
+      <%= @post.impressions %>
+    </div>
+    <div>
+      <%= image_tag(@post.image,size: '400x600') %>
+    </div>
+    <div>
+      <%= @post.action_plan %>
+    </div>
+  <% if current_user %>
+    <%= form_with(model: [@post,@comment],url: post_comments_path(@post.id),local: true) do |f|%>
+      <div class="field">
+        <%= f.label :text, "コメント投稿" %><br />
+        <%= f.text_area :text, class: :form__text %>
+      </div>
+      <div class="actions">
+        <%= f.submit "送信する", class: :form__btn  %>
+      </div>
+    <% end %>
+  <% end %>
+  <ul class="comments_lists">
+    <% if @comments %>
+    <% @comments.each do |comment| %>
+      <li class="comments_list">
+        <%= comment.text %>
+        <a href="/users/<%= comment.user.id %>">
+        <%= comment.user.name %>
+        </a>
+      </li>
+      <% end %>
+    <% end %>
   </ul>
-<% end %>
-  <div>
-    <%= @post.book_name %>
-  </div>
-  <div>
-    <%= @post.user.name %>
-  </div>
-  <div>
-    <%= @post.category.name %>
-  </div>
-  <div>
-    <%= @post.wrap_up %>
-  </div>
-  <div>
-    <%= @post.impressions %>
-  </div>
-  <div>
-    <%= image_tag(@post.image,size: '400x600') %>
-  </div>
-  <div>
-    <%= @post.action_plan %>
-  </div>
 </div>
