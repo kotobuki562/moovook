@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!,except: [:index,:show]
   before_action :move_to_index, except: [:index, :show]
-  # before_action :post_set, omly: [:show]
+  before_action :post_set, only: [:show,:edit,:update,:destroy]
+  before_action :move_to_index_another_user, only:[:edit,:update,:destroy]
 
   def index
     @posts = Post.includes(:user).order('created_at DESC')
@@ -21,15 +22,15 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
   end
 
   def edit
-    @post = Post.find(params[:id])
+    if current_user.id != @post.user.id
+      redirect_to action: :index
+    end
   end
 
   def update
-    @post = Post.find(params[:id])
     @post.update(post_params)
     if @post.save
       flash[:notice] = "編集成功！"
@@ -41,7 +42,6 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
     if @post.destroy
       flash[:notice] = "投稿を削除しました"
       redirect_to root_path
@@ -53,12 +53,18 @@ class PostsController < ApplicationController
 
   private
 
-  # def post_set
-  #   @post = Post.find(params[:id])
-  # end
+  def post_set
+    @post = Post.find(params[:id])
+  end
 
   def move_to_index
     unless user_signed_in?
+      redirect_to action: :index
+    end
+  end
+
+  def move_to_index_another_user
+    if current_user.id != @post.user.id
       redirect_to action: :index
     end
   end
