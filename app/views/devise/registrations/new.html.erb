@@ -1,3 +1,4 @@
+<div class="wrap">
 <h2>新規登録</h2>
 
 <%= form_with(model: @user, url: user_registration_path, method: :post, class: 'registration-main', local: true) do |f| %>
@@ -16,7 +17,7 @@
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %>文字より多く設定してください)</em>
+    <em>(<%= @minimum_password_length %>文字以上で設定してください)</em>
     <% end %><br />
     <%= f.password_field :password, placeholder:"小文字英数字混合でご入力ください", autocomplete: "new-password" %>
   </div>
@@ -30,4 +31,4 @@
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
-
+</div>
