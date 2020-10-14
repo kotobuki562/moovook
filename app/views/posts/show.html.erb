@@ -1,8 +1,10 @@
 <div class="wrap">
+<% if user_signed_in? && @post.user.id == current_user.id %>
   <ul>
     <li><%= link_to "編集",edit_post_path(@post.id),method: :get  %></li>
     <li><%= link_to "削除",post_path(@post.id),method: :delete %></li>
   </ul>
+<% end %>
   <div>
     <%= @post.book_name %>
   </div>

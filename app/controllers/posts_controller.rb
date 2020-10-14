@@ -26,6 +26,8 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+      redirect_to action: :index if current_user.id != @post.user.id
+    end
   end
 
   def update
@@ -66,4 +68,3 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:image, :book_name, :category_id, :wrap_up, :impressions, :action_plan).merge(user_id: current_user.id)
   end
-end
