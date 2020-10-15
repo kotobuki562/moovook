@@ -32,9 +32,9 @@
         <div>Book Like!</div>
       <% end %>
       <%if @post.likes.count == 0 %>
-        <%= image_tag('book.png',size: '30x30') %>Close!
+        <%= image_tag('book.png',size: '30x30') %>No Like!
       <% else %>
-        <%= @post.likes.count %><%= image_tag('open-book.png',size: '30x30') %>Book Likes!
+        <%= image_tag('open-book.png',size: '30x30') %><%= @post.likes.count %><span class="count-like">Book Likes!</span>
       <% end %>
       </div>
       <div>
