@@ -2,11 +2,7 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.create(comment_params)
     render json:{text: @comment}
-    if @comment.save
-      # render json:{comment: @comment}
-      # ActionCable.server.broadcast 'comment_channel', content: @comment
-      # redirect_to post_path(@comment.post)
-    else
+    unless  @comment.save
       @post = @comment.post
       @comments = @post.comments
       render "posts/show"
