@@ -21,9 +21,7 @@ function comment() {
         <li class="comments_list" id=${item.id}>
           ${item.text}
           <span class="comment-user-name">
-            <%= image_tag('man.png',size: '20x20') %>
-            <%= link_to(comment.user.name, user_path(comment.user.id)) %>
-            <%= image_tag('woman.png',size: '20x20') %>
+            ${item.user_name}
           </span>
         </li>`;
       list.insertAdjacentHTML("afterend", HTML);
