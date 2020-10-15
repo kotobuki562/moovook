@@ -14,9 +14,13 @@
       <div id="like-btn-<%= post.id %>">
       </div>
       <% if current_user.liked_by?(post.id) %>
-        <td><%= link_to 'いいね外す', destroy_like_path(post), method: :DELETE %> <%= post.likes.count %></td>
+        <td><%= link_to image_tag('open-book.png',size: '50x50'), destroy_like_path(post), method: :DELETE %></td>
+        <div><%= post.likes.count %></div>
+        <div>Book!</div>
       <% else %>
-        <td><%= link_to 'いいねする', create_like_path(post), method: :POST %> <%= post.likes.count %></td>
+        <td><%= link_to image_tag('book.png',size: '50x50'), create_like_path(post), method: :POST %></td>
+        <div><%= post.likes.count %></div>
+        <div>Book Like!</div>
       <% end %>
     </li>
   <% end %>
