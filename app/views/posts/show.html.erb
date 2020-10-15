@@ -5,6 +5,7 @@
       <li><%= link_to "削除",post_path(@post.id),method: :delete %></li>
     </ul>
   <% end %>
+  <div id="show-content" post-id=<%= @post.id %>>
     <div>
       <%= @post.book_name %>
     </div>
@@ -30,39 +31,43 @@
         <div><%= @post.likes.count %></div>
         <div>Book Like!</div>
       <% end %>
-    <%if @post.likes.count == 0 %>
-      <%= image_tag('book.png',size: '30x30') %>Close!
-    <% else %>
-      <%= @post.likes.count %><%= image_tag('open-book.png',size: '30x30') %>Book Likes!
-    <% end %>
-    </div>
-    <div>
-      <%= image_tag(@post.image,size: '400x600') %>
-    </div>
-    <div>
-      <%= @post.action_plan %>
-    </div>
-  <% if current_user %>
-    <%= form_with(model: [@post,@comment],url: post_comments_path(@post.id),local: true) do |f|%>
-      <div class="field">
-        <%= f.label :text, "コメント投稿" %><br />
-        <%= f.text_area :text, class: :form__text %>
+      <%if @post.likes.count == 0 %>
+        <%= image_tag('book.png',size: '30x30') %>Close!
+      <% else %>
+        <%= @post.likes.count %><%= image_tag('open-book.png',size: '30x30') %>Book Likes!
+      <% end %>
       </div>
-      <div class="actions">
-        <%= f.submit "送信する", class: :form__btn  %>
+      <div>
+        <%= image_tag(@post.image,size: '400x600') %>
       </div>
-    <% end %>
-  <% end %>
-  <ul class="comments_lists">
-    <% if @comments %>
-    <% @comments.each do |comment| %>
-      <li class="comments_list">
-        <%= comment.text %>
-        <a href="/users/<%= comment.user.id %>">
-        <%= comment.user.name %>
-        </a>
-      </li>
+      <div>
+        <%= @post.action_plan %>
+      </div>
+    <% if current_user %>
+      <%= form_with(model: [@post,@comment],url: post_comments_path(@post.id),local: true, id: "form") do |f|%>
+        <div class="field">
+          <%= f.label :text, "コメント投稿" %><br />
+          <%= f.text_area :text,id:"comment", class: :form__text %>
+        </div>
+        <div class="actions">
+          <%= f.submit "送信する", id: "submit", class: :form__btn  %>
+        </div>
       <% end %>
     <% end %>
-  </ul>
+    <ul id='comments' class="comments_lists">
+      <% if @comments %>
+      <div id="list"></div>
+      <% @comments.each do |comment| %>
+        <li class="comments_list" id=<%= comment.id %>>
+          <%= comment.text %>
+          <span class="comment-user-name">
+            <%= image_tag('man.png',size: '20x20') %>
+            <%= link_to(comment.user.name, user_path(comment.user.id)) %>
+            <%= image_tag('woman.png',size: '20x20') %>
+          </span>
+        </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
 </div>
