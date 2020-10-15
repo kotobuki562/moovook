@@ -21,7 +21,20 @@
       <%= @post.impressions %>
     </div>
     <div>
+    <% if current_user.liked_by?(@post.id) %>
+        <td><%= link_to image_tag('open-book.png',size: '50x50'), destroy_like_path(@post), method: :DELETE %></td>
+        <div><%= @post.likes.count %></div>
+        <div>Close!</div>
+      <% else %>
+        <td><%= link_to image_tag('book.png',size: '50x50'), create_like_path(@post), method: :POST %></td>
+        <div><%= @post.likes.count %></div>
+        <div>Book Like!</div>
+      <% end %>
+    <%if @post.likes.count == 0 %>
+      <%= image_tag('book.png',size: '30x30') %>Close!
+    <% else %>
       <%= @post.likes.count %><%= image_tag('open-book.png',size: '30x30') %>Book Likes!
+    <% end %>
     </div>
     <div>
       <%= image_tag(@post.image,size: '400x600') %>
