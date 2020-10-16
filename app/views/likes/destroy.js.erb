@@ -1,1 +1,2 @@
 <%# alert('いいねを解除できている!'); %>
+document.getElementById('post_<%= @post.id %>').innerHTML = '<%= j(render @post) %>'

@@ -7,5 +7,11 @@
     <%= @user.email %>
   </div>
   <h1 class="user-posts"><%= @user.name %>さんの投稿一覧</h1>
-  <%= render "posts/posts" %>
+  <ul class="contents">
+  <% @posts.each do |post| %>
+    <li class="content" id="post_<%= post.id %>">
+      <%= render "posts/post",post: post %>
+    </li>
+  <% end %>
+  </ul>
 </div>
