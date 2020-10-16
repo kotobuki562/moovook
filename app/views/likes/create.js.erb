@@ -1,1 +1,2 @@
 <%# alert('いいねが押せている！'); %>
+document.getElementById('post_<%= @post.id %>').innerHTML = '<%= j(render @post) %>'
