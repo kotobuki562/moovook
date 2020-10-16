@@ -10,6 +10,7 @@
     <%= favicon_link_tag 'favicon.png' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
   </head>
 
   <body>
@@ -38,5 +39,6 @@
       </div>
     <% end %>
     <%= yield %>
+    
   </body>
 </html>

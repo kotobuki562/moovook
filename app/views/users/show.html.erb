@@ -6,7 +6,7 @@
   <h1 class="user-posts"><%= @user.name %>さんの投稿一覧</h1>
   <ul class="contents">
   <% @posts.each do |post| %>
-    <li class="content" id="post_<%= post.id %>">
+    <li class="content darkmode-ignore" id="post_<%= post.id %>">
       <%= render "posts/post",post: post %>
     </li>
   <% end %>
