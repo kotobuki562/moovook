@@ -31,7 +31,7 @@
         <div><%= @post.likes.count %></div>
         <div>Book Like!</div>
       <% end %>
-      <%if @post.likes.count == 0 %>
+      <% if @post.likes.count == 0 %>
         <%= image_tag('book.png',size: '30x30') %>No Like!
       <% else %>
         <%= image_tag('open-book.png',size: '30x30') %><%= @post.likes.count %><span class="count-like">Book Likes!</span>
@@ -59,12 +59,12 @@
       <div id="list"></div>
       <% @comments.each do |comment| %>
         <li class="comments_list" id=<%= comment.id %>>
-          <%= comment.text %>
           <span class="comment-user-name">
             <%= image_tag('man.png',size: '20x20') %>
             <%= link_to(comment.user.name, user_path(comment.user.id)) %>
             <%= image_tag('woman.png',size: '20x20') %>
           </span>
+          <%= comment.text %>
         </li>
         <% end %>
       <% end %>

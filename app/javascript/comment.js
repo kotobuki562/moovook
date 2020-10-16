@@ -19,10 +19,10 @@ function comment() {
       const formText = document.getElementById("comment");
       const HTML = `
         <li class="comments_list" id=${item.id}>
-          ${item.text}
           <span class="comment-user-name">
             ${item.user_name}
           </span>
+          ${item.text}
         </li>`;
       list.insertAdjacentHTML("afterend", HTML);
       formText.value = "";
