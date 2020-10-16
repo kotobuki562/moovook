@@ -21,28 +21,22 @@
     <div>
       <%= @post.impressions %>
     </div>
+    
     <div>
-    <% if current_user.liked_by?(@post.id) %>
-        <td><%= link_to image_tag('open-book.png',size: '50x50'), destroy_like_path(@post), method: :DELETE %></td>
-        <div><%= @post.likes.count %></div>
-        <div>Close!</div>
-      <% else %>
-        <td><%= link_to image_tag('book.png',size: '50x50'), create_like_path(@post), method: :POST %></td>
-        <div><%= @post.likes.count %></div>
-        <div>Book Like!</div>
-      <% end %>
-      <% if @post.likes.count == 0 %>
-        <%= image_tag('book.png',size: '30x30') %>No Like!
-      <% else %>
-        <%= image_tag('open-book.png',size: '30x30') %><%= @post.likes.count %><span class="count-like">Book Likes!</span>
-      <% end %>
-      </div>
+    <% if @post.likes.count == 0 %>
+      <%= image_tag('book.png',size: '30x30') %>No Like!
+    <% else %>
+      <%= image_tag('open-book.png',size: '30x30') %><%= @post.likes.count %><span class="count-like">Book Likes!</span>
+    <% end %>
+    </div>
+
       <div>
         <%= image_tag(@post.image,size: '400x600') %>
       </div>
       <div>
         <%= @post.action_plan %>
       </div>
+
     <% if current_user %>
       <%= form_with(model: [@post,@comment],url: post_comments_path(@post.id),local: true, id: "form") do |f|%>
         <div class="field">

@@ -1,21 +1,19 @@
-
-
-  <%= link_to image_tag(post.image,size: '180x250'), post_path(post.id),method: :get %>
-  <div class="book-name">
-    <%= post.book_name %>
-  </div>
-  <div class="category-name">
-    <%= post.category.name %>
-  </div>
-  <div class="user-name">
-    <%= post.user.name %>
-  </div>
-    <% if current_user.liked_by?(post.id) %>
-      <td><%= link_to image_tag('open-book.png',size: '50x50'), destroy_like_path(post), method: :DELETE, remote: true %></td>
-      <div><%= post.likes.count %></div>
-      <div>Close!</div>
-    <% else %>
-      <td><%= link_to image_tag('book.png',size: '50x50'), create_like_path(post), method: :POST,remote: true %></td>
-      <div><%= post.likes.count %></div>
-      <div>Book Like!</div>
-    <% end %>
+<%= link_to image_tag(post.image,size: '180x250'), post_path(post.id),method: :get %>
+<div class="book-name">
+  <%= post.book_name %>
+</div>
+<div class="category-name">
+  <%= post.category.name %>
+</div>
+<div class="user-name">
+  <%= post.user.name %>
+</div>
+<% if current_user.liked_by?(post.id) %>
+  <td><%= link_to image_tag('open-book.png',size: '50x50'), destroy_like_path(post), method: :DELETE, remote: true %></td>
+  <div><%= post.likes.count %></div>
+  <div>Close!</div>
+<% else %>
+  <td><%= link_to image_tag('book.png',size: '50x50'), create_like_path(post), method: :POST,remote: true %></td>
+  <div><%= post.likes.count %></div>
+  <div>Book Like!</div>
+<% end %>
