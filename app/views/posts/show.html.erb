@@ -1,27 +1,30 @@
 <div class="wrap">
+
   <% if user_signed_in? && @post.user.id == current_user.id %>
-    <ul>
-      <li><%= link_to "編集",edit_post_path(@post.id),method: :get  %></li>
-      <li><%= link_to "削除",post_path(@post.id),method: :delete %></li>
+    <ul class="edit-destroy">
+      <li class="btn edit"><%= link_to "編集",edit_post_path(@post.id),method: :get  %></li>
+      <li class="btn-d destroy"><%= link_to "削除",post_path(@post.id),method: :delete %></li>
     </ul>
   <% end %>
-  <div id="show-content" post-id=<%= @post.id %>>
-    <div>
+
+  <div class="show-content" id="show-content" post-id=<%= @post.id %>>
+
+    <div class="show-book-name">
       <%= @post.book_name %>
     </div>
-    <div>
-      <%= @post.user.name %>
+
+    <div class="show-book-image">
+      <%= image_tag(@post.image,size: '400x600',class: "book-image") %>
     </div>
+
+    <div>
+      <%= link_to @post.user.name, user_path(@post.user.id), method: :get %>
+    </div>
+
     <div>
       <%= @post.category.name %>
     </div>
-    <div>
-      <%= @post.wrap_up %>
-    </div>
-    <div>
-      <%= @post.impressions %>
-    </div>
-    
+
     <div>
     <% if @post.likes.count == 0 %>
       <%= image_tag('book.png',size: '30x30') %>No Like!
@@ -30,38 +33,52 @@
     <% end %>
     </div>
 
-      <div>
-        <%= image_tag(@post.image,size: '400x600') %>
-      </div>
-      <div>
-        <%= @post.action_plan %>
-      </div>
+    
+    <div class="text show-wrap">
+      <h1 class="text-title">要約文</h1>
+      <%= @post.wrap_up %>
+    </div>
+
+    <div class="text show-impressions">
+      <h1 class="text-title">感想・思ったこと</h1>
+      <%= @post.impressions %>
+    </div>
+
+    <div class="text show-actionplan">
+      <h1 class="text-title">アクションプラン</h1>
+      <%= @post.action_plan %>
+    </div>
 
     <% if current_user %>
       <%= form_with(model: [@post,@comment],url: post_comments_path(@post.id),local: true, id: "form") do |f|%>
         <div class="field">
-          <%= f.label :text, "コメント投稿" %><br />
-          <%= f.text_area :text,id:"comment", class: :form__text %>
+          <%= f.label :text, "コメント投稿" %><span class="limit-text">※100文字まで！</span><br />
+          <%= f.text_area :text, id:"comment", class: :form__text %>
         </div>
         <div class="actions">
-          <%= f.submit "送信する", id: "submit", class: :form__btn  %>
+          <%= f.submit "コメントする", id: "submit", class: :comment__btn  %>
         </div>
       <% end %>
     <% end %>
+
     <ul id='comments' class="comments_lists">
       <% if @comments %>
       <div id="list"></div>
-      <% @comments.each do |comment| %>
-        <li class="comments_list" id=<%= comment.id %>>
-          <span class="comment-user-name">
-            <%= image_tag('man.png',size: '20x20') %>
-            <%= link_to(comment.user.name, user_path(comment.user.id)) %>
-            <%= image_tag('woman.png',size: '20x20') %>
-          </span>
-          <%= comment.text %>
-        </li>
+        <% @comments.each do |comment| %>
+          <li class="comments_list" id=<%= comment.id %>>
+            <span class="comment-user-name">
+              <%= image_tag('man.png',size: '20x20') %>
+              <%= link_to(comment.user.name, user_path(comment.user.id)) %>
+              <%= image_tag('woman.png',size: '20x20') %>
+            </span>
+            <div class="comment-text">
+              <%= comment.text %>
+            </div>
+          </li>
         <% end %>
       <% end %>
     </ul>
+
   </div>
+
 </div>
