@@ -10,7 +10,7 @@
 .content{
   border-radius: 10px;
   color: #f2efcd;
-  background-color: rgba(55, 164, 142, 0.7);
+  background-image: linear-gradient(-20deg, #00cdac 0%, #81cbc6 100%);
   text-align: center;
   padding: 20px 15px 0 15px;
   margin: 20px;
@@ -22,17 +22,25 @@
   white-space: nowrap;
   overflow: scroll;
   overflow: auto;
-  font-size: 16px;
+  font-size: 1.25rem;
+}
+.book-name a{
+  color: #f2efcd;
 }
 .user-name{
   white-space: nowrap;
   overflow: scroll;
   overflow: auto;
   padding: 10px;
-  font-size: 16px;
+  font-size: 1.25rem;
 }
-
+.user-name a{
+  color: #f2efcd;
+}
 .category-name{
   padding: 10px;
-  font-size: 16px;
+  font-size: 0.85rem;
+}
+.like-form{
+  padding-bottom: 0.85rem;
 }
