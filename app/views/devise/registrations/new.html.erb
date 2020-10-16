@@ -1,34 +1,36 @@
-<div class="wrap">
-<h2>新規登録</h2>
+<body class="top">
+  <div class="wrap">
+  <h2>新規登録</h2>
 
-<%= form_with(model: @user, url: user_registration_path, method: :post, class: 'registration-main', local: true) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= form_with(model: @user, url: user_registration_path, method: :post, class: 'registration-main', local: true) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, placeholder:"10文字以内", autocomplete: "name" %>
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name, autofocus: true, placeholder:"10文字以内", autocomplete: "name" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, placeholder:"PC・携帯どちらでも可", autocomplete: "email" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %>文字以上で設定してください)</em>
+      <% end %><br />
+      <%= f.password_field :password, placeholder:"小文字英数字混合でご入力ください", autocomplete: "new-password" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, placeholder:"確認用", autocomplete: "new-password" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Sign up" %>
+    </div>
+  <% end %>
   </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, placeholder:"PC・携帯どちらでも可", autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %>文字以上で設定してください)</em>
-    <% end %><br />
-    <%= f.password_field :password, placeholder:"小文字英数字混合でご入力ください", autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, placeholder:"確認用", autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-</div>
+</body>

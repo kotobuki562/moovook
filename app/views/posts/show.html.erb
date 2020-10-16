@@ -9,11 +9,11 @@
 
   <div class="show-content" id="show-content" post-id=<%= @post.id %>>
 
-    <div class="show-book-name">
+    <div class="show-book-name darkmode-ignore">
       <%= @post.book_name %>
     </div>
 
-    <div class="show-book-image">
+    <div class="show-book-image darkmode-ignore">
       <%= image_tag(@post.image,size: '400x600',class: "book-image") %>
     </div>
 
@@ -34,17 +34,17 @@
     </div>
 
     
-    <div class="text show-wrap">
+    <div class="text show-wrap darkmode-ignore">
       <h1 class="text-title">要約文</h1>
       <%= @post.wrap_up %>
     </div>
 
-    <div class="text show-impressions">
+    <div class="text show-impressions darkmode-ignore">
       <h1 class="text-title">感想・思ったこと</h1>
       <%= @post.impressions %>
     </div>
 
-    <div class="text show-actionplan">
+    <div class="text show-actionplan darkmode-ignore">
       <h1 class="text-title">アクションプラン</h1>
       <%= @post.action_plan %>
     </div>
@@ -56,7 +56,9 @@
           <%= f.text_area :text, id:"comment", class: :form__text %>
         </div>
         <div class="actions">
+          <div class="comment-btn darkmode-ignore">
           <%= f.submit "コメントする", id: "submit", class: :comment__btn  %>
+          </div>
         </div>
       <% end %>
     <% end %>
@@ -71,7 +73,7 @@
               <%= link_to(comment.user.name, user_path(comment.user.id)) %>
               <%= image_tag('woman.png',size: '20x20') %>
             </span>
-            <div class="comment-text">
+            <div class="comment-text darkmode-ignore">
               <%= comment.text %>
             </div>
           </li>

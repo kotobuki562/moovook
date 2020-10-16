@@ -8,6 +8,7 @@
 }
 
 .content{
+  opacity: 0.8;
   border-radius: 10px;
   color: #f2efcd;
   background-image: linear-gradient(-20deg, #00cdac 0%, #81cbc6 100%);
@@ -15,6 +16,9 @@
   padding: 20px 15px 0 15px;
   margin: 20px;
   box-shadow: 5px 5px 5px 2px rgba(55, 164, 142, 0.5);
+}
+.content:hover{
+  opacity: 1;
 }
 
 .book-name{

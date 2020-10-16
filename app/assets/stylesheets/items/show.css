@@ -29,13 +29,18 @@
 }
 
 .show-book-image{
+  opacity: 0.8;
   padding: 30px;
   border-radius: 10px;
   background-image: linear-gradient(-20deg, #00cdac 0%, #81cbc6 100%);
   box-shadow: 5px 5px 5px 2px rgba(55, 164, 142, 0.5);
 }
+.show-book-image:hover{
+  opacity: 1;
+}
 /* 要約・感想・アクションプラン文 */
 .text{
+  opacity: 0.8;
   color: #f2efcd;
   border-radius: 10px;
   letter-spacing: 0.1rem;
@@ -43,6 +48,9 @@
   padding: 20px;
   background-color: #72baac;
   box-shadow: 5px 5px 5px 2px rgba(55, 164, 142, 0.5);
+}
+.text:hover{
+  opacity: 1;
 }
 .text-title{
   text-align: center;
@@ -87,6 +95,7 @@
   justify-content: center;
 }
 .comment__btn{
+  opacity: 0.8;
   margin-top: 20px;
   padding: 10px;
   border-radius: 10px;
@@ -94,6 +103,9 @@
   background-image: linear-gradient(-20deg, #00cdac 0%, #81cbc6 100%);
   color: #f2efcd;
   box-shadow: 3px 3px 3px 2px rgba(55, 164, 142, 0.5);
+}
+.comment__btn:hover{
+  opacity: 1;
 }
 .comment-text{
   color: #6a9f94;

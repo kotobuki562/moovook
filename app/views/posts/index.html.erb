@@ -1,7 +1,7 @@
 <div class="wrap">
   <ul class="contents">
     <% @posts.each do |post| %>
-      <li class="content" id="post_<%= post.id %>">
+      <li class="content darkmode-ignore" id="post_<%= post.id %>">
         <%= render "post", post: post %>
       </li>
     <% end %>
