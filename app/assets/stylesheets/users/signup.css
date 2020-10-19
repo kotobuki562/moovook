@@ -1,0 +1,31 @@
+.top{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/images/background-book.jpg");
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-blend-mode: lighten;
+}
+.signup-user{
+  width: 100%;
+  padding-top: 5%;
+}
+.signup-user h2{
+  color: azure;
+}
+.signup-user-form{
+  width: 100%;
+}
+.field-in{
+  padding-top: 5%;
+  color: azure;
+  width: 100%;
+}
+.signup_user_form_content{
+  width: 100%;
+  height: 30px;
+  font-size: 1rem;
+  color: azure;
+  background-color: rgba(62, 62, 62, 0.6);
+}

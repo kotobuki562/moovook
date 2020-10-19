@@ -24,15 +24,7 @@ body{
 .darkmode-toggle{
   z-index: 5;
 }
-.top{
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("/images/background-book.jpg");
-  min-height: 100vh;
-  background-color: rgba(255, 255, 255, 0.2);
-  background-blend-mode: lighten;
-}
+
 
 .wrap{
   width: 100vw;

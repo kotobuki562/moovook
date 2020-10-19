@@ -1,27 +1,60 @@
-<div class="wrap">
-<h2>ログイン</h2>
+<body class="top2">
+  <div class="wrap">
+    <h1 class="introduce-title">MooVooKで実現できること</h1>
+    <div class="introduces">
 
-<%= form_with(model: @user, url: user_session_path ,method: :post, class: 'registration-main', local: true) do |f| %>
+      <div class="introduce">
+        <img src="/images/book-login.png" class="top-image book-image">
+        <p class="introduce-text book-text">
+        書籍の要約と感想、学んだことのアクションプランを他のユーザーと共有することができる。</br>
+        書籍の概要を共有して他のユーザーがその本を手にするきっかけを作ろう。</br>
+        感想を記述して本を読み終わって自分の心情を言語化し理解に落とし込もう。</br>
+        アクションプランを設定してあなた自信をアップグレードさせよう。</p>
+      </div>
+      
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+      <div class="introduce">
+        <img src="/images/comment-login.png" class="top-image comment-image">
+        <p class="introduce-text book-text">
+        ユーザーの投稿にコメントを残すことができる。</br>
+        投稿についての質問、感想、アクション、なんでも残そう。</br>
+        他のユーザーからフィードバックをもらい、必要に応じて編集しよう。</p>
+      </div>
+
+      <div class="introduce">
+        <img src="/images/like-login.png" class="top-image like-image">
+        <p class="introduce-text book-text">
+        「Book Like!」機能が使える。</br>
+        気に入った投稿があればBook Likeしよう。</br>
+        BooK Likeをすると閉じていた本のアイコンが開く。
+        好きなだけBook Likeを残そう。</p>
+      </div>
+
+    </div>
+
+    <div class="signup-user">
+      <h2>ログイン</h2>
+
+      <%= form_with(model: @user, url: user_session_path ,method: :post, class: 'registration-main', local: true) do |f| %>
+
+        <div class="field-in">
+          <p>メールアドレス</p>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: :signup_user_form_content %>
+        </div>
+
+        <div class="field-in">
+          <p>パスワード</p>
+          <%= f.password_field :password, autocomplete: "current-password", class: :signup_user_form_content %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "ログイン",class: "btn btn-outline-dark" %>
+          
+        </div>
+      </div>
+      <%= link_to "新規登録", new_user_registration_path, class:"btn signin" %>
+    <% end %>
   </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-</div>
+</body>
 
 

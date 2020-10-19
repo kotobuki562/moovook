@@ -93,6 +93,7 @@
 .actions{
   display: flex;
   justify-content: center;
+  padding-top: 5%;
 }
 .comment__btn{
   opacity: 0.8;
