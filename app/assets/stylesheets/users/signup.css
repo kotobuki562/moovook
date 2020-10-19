@@ -9,7 +9,7 @@
 }
 .signup-user{
   width: 100%;
-  padding-top: 5%;
+  padding: 5% 0;
 }
 .signup-user h2{
   color: azure;
@@ -28,4 +28,9 @@
   font-size: 1rem;
   color: azure;
   background-color: rgba(62, 62, 62, 0.6);
+}
+
+.to-login{
+  color: azure;
+  font-size: 1.75rem;
 }

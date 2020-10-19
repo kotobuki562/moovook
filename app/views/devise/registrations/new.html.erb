@@ -1,5 +1,10 @@
 <body class="top">
   <div class="wrap">
+
+    <div class="introduces">
+      <h2 class="introduce-title">さあ、始めよう！</h2>
+      <img src="/images/join.png" class="top-image join-image">
+    </div>
   
     <div class="signup-user">
       <h2>新規登録</h2>
@@ -31,7 +36,9 @@
           <%= f.submit "新規登録", class: "btn btn-outline-dark" %>
         </div>
       <% end %>
-      <%= link_to "ログイン", new_user_session_path, class:"btn login" %>
+    </div>
+    <div class="signup-or-login">
+      <%= link_to "アカウントをお持ちの方はこちらをクリック", new_user_session_path, class:"to-login" %>
     </div>
   </div>
 </body>

@@ -34,3 +34,14 @@
   color: azure;
   font-size: 1.25rem;
 }
+.signup-or-login{
+  padding: 5% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.to-signin{
+  color: azure;
+  font-size: 1.75rem;
+}

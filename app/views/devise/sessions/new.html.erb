@@ -26,7 +26,7 @@
         <p class="introduce-text book-text">
         「Book Like!」機能が使える。</br>
         気に入った投稿があればBook Likeしよう。</br>
-        BooK Likeをすると閉じていた本のアイコンが開く。
+        BooK Likeをすると閉じていた本のアイコンが開く。</br>
         好きなだけBook Likeを残そう。</p>
       </div>
 
@@ -52,8 +52,10 @@
           
         </div>
       </div>
-      <%= link_to "新規登録", new_user_registration_path, class:"btn signin" %>
     <% end %>
+    <div class="signup-or-login">
+      <%= link_to "アカウントをお持ちではないはこちらをクリック", new_user_registration_path, class:"to-signin" %>
+    </div>
   </div>
 </body>
 
