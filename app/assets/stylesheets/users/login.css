@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   background-image: url("/images/janko-ferlic-sfL_QOnmy00-unsplash\ 2.jpg");
   min-height: 100vh;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
   background-blend-mode: lighten;
 }
 .introduce-logo{
