@@ -7,7 +7,7 @@
     </div>
   
     <div class="signup-user">
-      <h2>新規登録</h2>
+      <h2 class="signup-title">新規登録</h2>
 
       <%= form_with(model: @user, url: user_registration_path, method: :post, class: 'registration-main', local: true) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>

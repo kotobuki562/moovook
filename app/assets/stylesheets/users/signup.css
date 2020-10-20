@@ -39,3 +39,15 @@
   color: azure;
   font-size: 1.75rem;
 }
+
+@media(max-width:600px){
+  .to-login{
+    font-size: 1rem;
+  }
+  .introduce-title{
+    font-size: 1rem;
+  }
+  .signup-title{
+    font-size: 1.5rem;
+  }
+}
