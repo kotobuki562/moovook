@@ -68,7 +68,34 @@ body{
   text-align: center;
   background-color: #D16E5B;
 }
+.page-count{
+  isolation: isolate;
+  padding: 5% 0;
+  display: flex;
+  justify-content: center;
+}
+/*ページネーション自体のデザイン*/
+.pagination>li>a {
+  opacity: 0.8;
+  border: none;     /*枠線をなくす*/
+  color: #f2efcd;  /*文字の色を変える*/
+  margin: 10px;
+  background-color: #72baac;
+  box-shadow: 3px 3px 3px rgba(55, 164, 142, 0.4);
+  padding: 10px;
+}
 
+/* 表示しているページ番号のデザイン */
+.pagination>.active>a {     
+  background: #93c9ff;     /*背景の色を変える*/
+  border-radius: 15px;    /*角を丸くする*/
+}
+
+/*ホバー時のデザイン*/
+.pagination>li>a:hover {
+  opacity: 1;      
+  border-radius: 15px;    /*角を丸くする*/
+}
 @media(max-width:600px){
   .wrap{
     padding: 0 10%;
@@ -77,7 +104,7 @@ body{
     padding: 0 10%;
   }
   .header_logo_image{
-    height: 50px;
+    height: 60px;
     width: 80px;
   }
   .btn{
@@ -86,8 +113,12 @@ body{
   .flash{
     font-size: 1rem;
   }
+  .pagination>li>a {          
+  border: none;     /*枠線をなくす*//*文字の色を変える*/
+  margin: 0;
+  padding: 3px;
 }
-
+}
 
 @media (min-width: 992px){
   .grid-6{
