@@ -37,17 +37,17 @@
     
     <div class="text show-wrap darkmode-ignore">
       <h1 class="text-title">要約文</h1>
-      <%= @post.wrap_up %>
+      <%= safe_join(@post.wrap_up.split("\n"),tag(:br)) %>
     </div>
 
     <div class="text show-impressions darkmode-ignore">
       <h1 class="text-title">感想・思ったこと</h1>
-      <%= @post.impressions %>
+      <%= safe_join(@post.impressions.split("\n"),tag(:br)) %>
     </div>
 
     <div class="text show-actionplan darkmode-ignore">
       <h1 class="text-title">アクションプラン</h1>
-      <%= @post.action_plan %>
+      <%= safe_join(@post.action_plan.split("\n"),tag(:br)) %>
     </div>
 
     <% if current_user %>

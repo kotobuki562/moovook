@@ -1,9 +1,5 @@
 <%= render 'shared/header' %>
 <div class="wrap">
-  <div>マイページです</div>
-  <div>
-    <%= @user.name %>さん
-  </div>
   <h1 class="user-posts"><%= @user.name %>さんの投稿一覧</h1>
   <ul class="contents">
   <% @posts.each do |post| %>
