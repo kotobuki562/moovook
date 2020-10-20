@@ -10,6 +10,7 @@ require("channels")
 require("../comment");
 require("../darkmode")
 require("../nav")
+require("../count")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

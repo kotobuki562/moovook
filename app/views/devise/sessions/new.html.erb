@@ -1,33 +1,23 @@
 <body class="top2">
   <div class="wrap">
-    <h1 class="introduce-title">MooVooKで実現できること</h1>
+    
     <div class="introduces">
+      <%= image_tag('logo.png',width:"300px",class:"introduce-logo") %>
 
       <div class="introduce">
         <img src="/images/book-login.png" class="top-image book-image">
-        <p class="introduce-text book-text">
-        書籍の要約と感想、学んだことのアクションプランを他のユーザーと共有することができる。</br>
-        書籍の概要を共有して他のユーザーがその本を手にするきっかけを作ろう。</br>
-        感想を記述して本を読み終わって自分の心情を言語化し理解に落とし込もう。</br>
-        アクションプランを設定してあなた自信をアップグレードさせよう。</p>
+        <p class="introduce-text book-text"> 書籍の要約と感想、学んだことのアクションプランを他のユーザーとシェアしよう。</p>
       </div>
       
 
       <div class="introduce">
         <img src="/images/comment-login.png" class="top-image comment-image">
-        <p class="introduce-text book-text">
-        ユーザーの投稿にコメントを残すことができる。</br>
-        投稿についての質問、感想、アクション、なんでも残そう。</br>
-        他のユーザーからフィードバックをもらい、必要に応じて編集しよう。</p>
+        <p class="introduce-text book-text">コメントでコミュニケーション。</p>
       </div>
 
       <div class="introduce">
         <img src="/images/like-login.png" class="top-image like-image">
-        <p class="introduce-text book-text">
-        「Book Like!」機能が使える。</br>
-        気に入った投稿があればBook Likeしよう。</br>
-        BooK Likeをすると閉じていた本のアイコンが開く。</br>
-        好きなだけBook Likeを残そう。</p>
+        <p class="introduce-text book-text">「Book Like!」機能でお気に入りの投稿をチェック。</p>
       </div>
 
     </div>
@@ -54,7 +44,7 @@
       </div>
     <% end %>
     <div class="signup-or-login">
-      <%= link_to "アカウントをお持ちではないはこちらをクリック", new_user_registration_path, class:"to-signin" %>
+      <%= link_to "アカウントはお持ちですか？", new_user_registration_path, class:"to-signin" %>
     </div>
   </div>
 </body>

@@ -3,7 +3,7 @@
 
   <% if user_signed_in? && @post.user.id == current_user.id %>
     <ul class="edit-destroy">
-      <li class="btn edit darkmode-ignore"><%= link_to "編集",edit_post_path(@post.id),method: :get  %></li>
+      <li class="btn-e edit darkmode-ignore"><%= link_to "編集",edit_post_path(@post.id),method: :get  %></li>
       <li class="btn-d destroy darkmode-ignore"><%= link_to "削除",post_path(@post.id),method: :delete %></li>
     </ul>
   <% end %>

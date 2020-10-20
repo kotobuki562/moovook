@@ -27,7 +27,7 @@ body{
 
 .wrap{
   width: 100vw;
-  padding: 0px 50px;
+  padding: 0px 5%;
 }
 
 .header{
@@ -68,6 +68,26 @@ body{
   text-align: center;
   background-color: #D16E5B;
 }
+
+@media(max-width:600px){
+  .wrap{
+    padding: 0 10%;
+  }
+  .header{
+    padding: 0 10%;
+  }
+  .header_logo_image{
+    height: 50px;
+    width: 80px;
+  }
+  .btn{
+    font-size: 0.85rem;
+  }
+  .flash{
+    font-size: 1rem;
+  }
+}
+
 
 @media (min-width: 992px){
   .grid-6{

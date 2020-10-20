@@ -8,13 +8,16 @@
   letter-spacing: 0.5rem;
   color: #f2efcd;
   padding: 1.25rem;
+  text-decoration: none;
 }
 .destroy a{
   letter-spacing: 0.5rem;
   color: #f2efcd;
   padding: 1.25rem;
+  text-decoration: none;
 }
 .btn-d{
+  opacity: 0.8;
   font-size: 20px;
   margin: 5px 8px;
   color: #f2efcd;
@@ -22,6 +25,22 @@
   padding: 5px 8px;
   border-radius: 5px;
   box-shadow: 3px 3px 3px rgba(215, 102, 79, 0.4);
+}
+.btn-d:hover{
+  opacity: 1;
+}
+.btn-e{
+  opacity: 0.8;
+  font-size: 20px;
+  margin: 5px 8px;
+  color: #f2efcd;
+  background-color: #72baac;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgba(55, 164, 142, 0.4);
+}
+.btn-e:hover{
+  opacity: 1;
 }
 
 .show-content{
@@ -31,6 +50,10 @@
 }
 
 .show-book-name{
+  width: 100%;
+  white-space: nowrap;
+  overflow: scroll;
+  overflow: auto;
   font-size: 2.5rem;
   color: #72baac;
   text-align: center;
@@ -70,7 +93,7 @@
   padding: 30px 0;
 }
 #comment{
-  width: calc(100vw - 300px);
+  width: 300px;
   height: 200px;
   background-color: #f2efcd;
   color: #72baac;
@@ -119,4 +142,25 @@
 }
 .comment-text{
   color: #6a9f94;
+}
+
+@media(max-width:600px){
+  .book-image{
+    width: 200px;
+    height: 300px;
+  }
+  .text-title{
+    font-size: 1.25rem;
+  }
+  .text{
+    font-size: 0.75rem;
+  }
+  .show-book-name{
+    font-size: 1.85rem;
+  }
+}
+@media(min-width:600px){
+  #comment{
+    width: calc(100vw - 300px);
+  }
 }

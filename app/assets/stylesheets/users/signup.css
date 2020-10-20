@@ -7,9 +7,14 @@
   background-color: rgba(255, 255, 255, 0.2);
   background-blend-mode: lighten;
 }
+.introduce-title{
+  padding-top: 5%;
+  text-align: center;
+  color: azure;
+}
 .signup-user{
   width: 100%;
-  padding: 5% 0;
+  padding: 10% 0;
 }
 .signup-user h2{
   color: azure;
