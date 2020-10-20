@@ -2,11 +2,12 @@
 <%= render 'shared/error_messages', model: f.object %>
   <div class="field">
     <%= f.label :book_name, "本のタイトル名" %><br />
-    <%= f.text_field :book_name %>
+    <%= f.text_field :book_name, class: :form__text__title %>
   </div>
 
-  <%= "本のカテゴリー" %>
-  <div class="field">
+  
+  <div class="field category-book">
+    <%= "本のカテゴリー" %>
     <%= f.collection_select(:category_id, Category.all , :id, :name, {}, {class:"select-box", id:"item-category"}) %>
   </div>
 

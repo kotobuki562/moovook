@@ -5,18 +5,11 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
           <div class="user_nav grid-6">
             <%= link_to "マイページ", user_path(current_user.id),method: :get, class:"btn mypage" %>
             <%= link_to "投稿する", new_post_path, class:"btn post" %>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"btn logout" %>
           </div>
-        <% else %>
-          <div class="grid-6">
-            <%= link_to "ログイン", new_user_session_path, class:"btn login" %>
-            <%= link_to "新規登録", new_user_registration_path, class:"btn signin" %>
-          </div>
-        <% end %>
       </div>
     </ul>
   </div>

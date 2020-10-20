@@ -14,6 +14,15 @@
   color: #f2efcd;
   padding: 1.25rem;
 }
+.btn-d{
+  font-size: 20px;
+  margin: 5px 8px;
+  color: #f2efcd;
+  background-color: #D16E5B;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgba(215, 102, 79, 0.4);
+}
 
 .show-content{
   display: flex;
@@ -58,7 +67,7 @@
 }
 /* コメントのデザイン */
 .field{
-  margin-top: 20px;
+  padding: 30px 0;
 }
 #comment{
   width: calc(100vw - 300px);

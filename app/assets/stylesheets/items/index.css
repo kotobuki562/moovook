@@ -13,8 +13,8 @@
   color: #f2efcd;
   background-image: linear-gradient(-20deg, #00cdac 0%, #81cbc6 100%);
   text-align: center;
-  padding: 20px 15px 0 15px;
-  margin: 20px;
+  padding: 5% 5% 0 5%;
+  margin: 5%;
   box-shadow: 5px 5px 5px 2px rgba(55, 164, 142, 0.5);
 }
 .content:hover{
@@ -22,7 +22,7 @@
 }
 
 .book-name{
-  padding: 10px;
+  padding: 3%;
   white-space: nowrap;
   overflow: scroll;
   overflow: auto;
@@ -35,14 +35,14 @@
   white-space: nowrap;
   overflow: scroll;
   overflow: auto;
-  padding: 10px;
+  padding: 3%;
   font-size: 1.25rem;
 }
 .user-name a{
   color: #f2efcd;
 }
 .category-name{
-  padding: 10px;
+  padding: 3%;
   font-size: 0.85rem;
 }
 .like-form{
