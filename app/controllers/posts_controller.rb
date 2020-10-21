@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:index, :show, :search]
   before_action :post_set, only: [:show,:edit,:update,:destroy]
   before_action :move_to_index_another_user, only:[:edit,:update,:destroy]
 
@@ -52,6 +52,16 @@ class PostsController < ApplicationController
     end
   end
 
+  def search
+    @posts = Post.search(params[:keyword])
+    @post = Post.includes(:user).order('created_at DESC')
+  end
+
+  # def search_category
+  #   @posts = Post.search(params[:keyword])
+  #   @post = Post.includes(:user).order('created_at DESC')
+  # end
+
   private
 
   def post_set
@@ -73,4 +83,5 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:image, :book_name, :category_id, :wrap_up, :impressions, :action_plan).merge(user_id: current_user.id)
   end
+
 end

@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   root to: 'posts#index'
   resources :users, only: [:show]
   resources :posts, only: [:new, :create, :show, :edit, :update, :destroy] do
+    collection do
+      get 'search'
+    end
     resources :comments, only: [:create]
   end
   post 'like/:id' => 'likes#create', as: 'create_like'
