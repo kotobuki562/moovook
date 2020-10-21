@@ -61,7 +61,8 @@
 }
 
 .show-book-image{
-  opacity: 0.8;
+  transition: 0.5s;
+  opacity: 0.7;
   padding: 30px;
   border-radius: 10px;
   background-image: linear-gradient(-20deg, #00cdac 0%, #81cbc6 100%);
@@ -72,7 +73,8 @@
 }
 /* 要約・感想・アクションプラン文 */
 .text{
-  opacity: 0.8;
+  transition: 0.5s;
+  opacity: 0.7;
   color: #f2efcd;
   border-radius: 10px;
   letter-spacing: 0.1rem;
@@ -128,6 +130,7 @@
   padding-top: 5%;
 }
 .comment__btn{
+  transition: 0.5s;
   opacity: 0.8;
   margin-top: 20px;
   padding: 10px;
