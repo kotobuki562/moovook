@@ -1,7 +1,15 @@
 .user-posts{
+  isolation: isolate;
+  color: #72baac;
   text-align: center;
+  padding-top: 10%;
 }
 .string-length{
   color: #D16E5B;
   font-size: 0.75rem;
+}
+@media(max-width:600px){
+  .user-posts{
+    font-size: 1.5rem;
+  }
 }

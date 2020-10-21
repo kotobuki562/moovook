@@ -6,8 +6,8 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
           <div class="user_nav grid-6">
-            <%= link_to "マイページ", user_path(current_user.id),method: :get, class:"btn mypage" %>
             <%= link_to "投稿する", new_post_path, class:"btn post" %>
+            <%= link_to "マイページ", user_path(current_user.id),method: :get, class:"btn mypage" %>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"btn logout" %>
           </div>
       </div>
