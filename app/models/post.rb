@@ -17,5 +17,22 @@ class Post < ApplicationRecord
   belongs_to :user
   has_many :likes, dependent: :destroy
   has_many :comments, dependent: :destroy
-  has_one_attached :image
+  has_one_attached :image, dependent: :destroy
+
+  def self.search(search)
+    if search != ""
+      Post.where('book_name LIKE(?)', "%#{search}%")
+    else
+      Post.all.order('created_at DESC')
+    end
+  end
+
+  # def self.search_category(search_category)
+  #   if search_category != "---"
+  #     Post.where('category_id.name LIKE(?)', "%#{search_category}%")
+  #   else
+  #     Post.all.order('created_at DESC')
+  #   end
+  # end
+
 end

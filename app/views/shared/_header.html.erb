@@ -5,11 +5,19 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-          <div class="user_nav grid-6">
-            <%= link_to "投稿する", new_post_path, class:"btn post" %>
-            <%= link_to "マイページ", user_path(current_user.id),method: :get, class:"btn mypage" %>
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"btn logout" %>
-          </div>
+        <div class="user_nav grid-6">
+          <%= link_to "投稿する", new_post_path, class:"btn post" %>
+          <%= link_to "マイページ", user_path(current_user.id),method: :get, class:"btn mypage" %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"btn logout" %>
+          <%= form_with(url: search_posts_path, local: true, method: :get, class: "form-inline my-2 my-lg-0") do |form| %>
+            <%= form.text_field :keyword, placeholder: "本のタイトルで検索", class: "form-control mr-sm-2", type:"search" %>
+            <%= form.submit "Search", class: "btn btn-outline-success my-2 my-sm-0" %>
+          <% end %>
+          <%# <%= form_with(url: search_category_posts_path, local: true, method: :get, class: "form-inline my-2 my-lg-0") do |form| %>
+            <%# <%= form.collection_select :category_id, Category.all , :id, :name, {}, {class:"form-control", id:"exampleFormControlSelect1"} %>
+            <%# <%= form.submit "Search", class: "btn btn-outline-success my-2 my-sm-0" %>
+          <%# <% end %>
+        </div>
       </div>
     </ul>
   </div>

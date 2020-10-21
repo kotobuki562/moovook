@@ -1,0 +1,12 @@
+<%= render 'shared/header' %>
+<div class="wrap">
+  <h1>検索結果</h1>
+  <ul class="contents">
+    <% @posts.each do |post| %>
+      <li class="content darkmode-ignore" id="post_<%= post.id %>">
+        <%= render "post", post: post %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
