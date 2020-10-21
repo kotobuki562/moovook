@@ -1,7 +1,7 @@
 function addDarkmodeWidget() {
     new Darkmode().showWidget();
     const options = {
-  bottom: '32pxpx', // default: '32px'
+  bottom: '50px', // default: '32px'
   right: '32px', // default: '32px'
   left: 'unset', // default: 'unset'
   time: '1s', // default: '0.3s'
