@@ -21,7 +21,7 @@ class Post < ApplicationRecord
 
   def self.search(search)
     if search != ""
-      Post.where('book_name LIKE(?)', "%#{search}%")
+      Post.where('book_name LIKE(?)', "%#{search}%").order('created_at DESC')
     else
       Post.all.order('created_at DESC')
     end
