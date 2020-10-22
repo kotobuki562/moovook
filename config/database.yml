@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: moovook_production
-  username: moovook
-  password: <%= ENV['MOOVOOK_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
