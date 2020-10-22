@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :move_to_index, except: [:index, :show, :search]
-  before_action :post_set, only: [:show,:edit,:update,:destroy]
-  before_action :move_to_index_another_user, only:[:edit,:update,:destroy]
+  before_action :post_set, only: [:show, :edit, :update, :destroy]
+  before_action :move_to_index_another_user, only: [:edit, :update, :destroy]
 
   def index
     @posts = Post.includes(:user).order('created_at DESC').page(params[:page]).per(6)
@@ -26,28 +26,26 @@ class PostsController < ApplicationController
   end
 
   def edit
-    if current_user.id != @post.user.id
-      redirect_to action: :index
-    end
+    redirect_to action: :index if current_user.id != @post.user.id
   end
 
   def update
     @post.update(post_params)
     if @post.save
-      flash[:notice] = "編集成功！"
+      flash[:notice] = '編集成功！'
       redirect_to post_path
     else
-      flash[:notice] = "編集できませんでした"
+      flash[:notice] = '編集できませんでした'
       render :edit
     end
   end
 
   def destroy
     if @post.destroy
-      flash[:notice] = "投稿を削除しました"
+      flash[:notice] = '投稿を削除しました'
       redirect_to root_path
     else
-      flash[:notice] = "投稿削除に失敗しました"
+      flash[:notice] = '投稿削除に失敗しました'
       render :show
     end
   end
@@ -69,19 +67,14 @@ class PostsController < ApplicationController
   end
 
   def move_to_index
-    unless user_signed_in?
-      redirect_to action: :index
-    end
+    redirect_to action: :index unless user_signed_in?
   end
 
   def move_to_index_another_user
-    if current_user.id != @post.user.id
-      redirect_to action: :index
-    end
+    redirect_to action: :index if current_user.id != @post.user.id
   end
-  
+
   def post_params
     params.require(:post).permit(:image, :book_name, :category_id, :wrap_up, :impressions, :action_plan).merge(user_id: current_user.id)
   end
-
 end

@@ -20,7 +20,7 @@ class Post < ApplicationRecord
   has_one_attached :image, dependent: :destroy
 
   def self.search(search)
-    if search != ""
+    if search != ''
       Post.where('book_name LIKE(?)', "%#{search}%").order('created_at DESC')
     else
       Post.all.order('created_at DESC')
@@ -34,5 +34,4 @@ class Post < ApplicationRecord
   #     Post.all.order('created_at DESC')
   #   end
   # end
-
 end

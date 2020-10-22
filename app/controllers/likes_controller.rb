@@ -1,7 +1,6 @@
 class LikesController < ApplicationController
-
   before_action :post_params
-  
+
   def create
     @posts = Post.includes(:user).order('created_at DESC')
     Like.create(user_id: current_user.id, post_id: params[:id])
