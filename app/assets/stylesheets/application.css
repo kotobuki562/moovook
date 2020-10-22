@@ -51,6 +51,7 @@ body{
 }
 
 .btn{
+  transition: color .3s, background.3s, box-shadow .3s, transform .3s;
   font-size: 20px;
   margin: 5px 8px;
   color: #f2efcd;
@@ -58,6 +59,9 @@ body{
   padding: 5px 8px;
   border-radius: 5px;
   box-shadow: 3px 3px 3px rgba(55, 164, 142, 0.4);
+}
+.btn:action{
+  transition-duration: .1s;
 }
 
 .grid-6{
@@ -88,6 +92,7 @@ body{
   background-color: #72baac;
   box-shadow: 3px 3px 3px rgba(55, 164, 142, 0.4);
   padding: 10px;
+  transition: 0.2s;
 }
 
 /* 表示しているページ番号のデザイン */
