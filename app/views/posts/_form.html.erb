@@ -1,41 +1,40 @@
 <%= form_with(model: @post, local: true) do |f|%>
 <%= render 'shared/error_messages', model: f.object %>
   <div class="field">
-    <%= f.label :book_name, "本のタイトル名" %><br />
+    <h2 class="form-title"><%= f.label :book_name, "本のタイトル名" %></h2><br />
     <%= f.text_field :book_name, class: :form__text__title, id:"title-text" %>
     <span class="string-length" id="char_num_t"></span><span class="string-length">/40文字</span>
   </div>
 
-  
   <div class="field category-book">
-    <%= "本のカテゴリー" %>
+    <h2 class="form-title"><%= "本のカテゴリー" %></h2><br />
     <%= f.collection_select(:category_id, Category.all , :id, :name, {}, {class:"form-control", id:"exampleFormControlSelect1"}) %>
   </div>
 
   <div class="field">
-    <%= f.label :wrap_up, "本の要約" %><br />
+    <h2 class="form-title"><%= f.label :wrap_up, "本の要約" %></h2><br />
     <%= f.text_area :wrap_up, class: :form__text, id:"wrap-text" %>
     <span class="string-length" id="char_num_w"></span><span class="string-length">/1000文字</span>
   </div>
 
   <div class="field">
-    <%= f.label :impressions, "本を読んでの感想" %><br />
+    <h2 class="form-title"><%= f.label :impressions, "本を読んでの感想" %></h2><br />
     <%= f.text_area :impressions, class: :form__text, id:"impressions-text" %>
     <span class="string-length" id="char_num_i"></span><span class="string-length">/1000文字</span>
   </div>
 
   <div class="field">
-    <%= f.label :action_plan, "本を読んでのアクションプラン" %><br />
+    <h2 class="form-title"><%= f.label :action_plan, "本を読んでのアクションプラン" %></h2><br />
     <%= f.text_area :action_plan, class: :form__text, id:"action-text" %>
     <span class="string-length" id="char_num_a"></span><span class="string-length">/1000文字</span>
   </div>
 
   <div class="field">
-    <%= f.label :image, "本の表紙画像" %><br />
+    <h2 class="form-title"><%= f.label :image, "本の表紙画像" %></h2><br />
     <%= f.file_field :image %>
   </div>
 
-  <div class="actions">
+  <div class="actions new-form-btn">
     <%= f.submit "保存する", class: :form__btn  %>
   </div>
 <% end %>
