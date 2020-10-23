@@ -14,67 +14,67 @@ RSpec.describe Post, type: :model do
     it 'imageがない場合登録できないこと' do
       @post.image = nil
       @post.valid?
-      expect(@post.errors.full_messages).to include("Image can't be blank")
+      expect(@post.errors.full_messages).to include('本の表紙画像を入力してください')
     end
 
     it 'book_nameがない場合登録できないこと' do
       @post.book_name = nil
       @post.valid?
-      expect(@post.errors.full_messages).to include("Book name can't be blank")
+      expect(@post.errors.full_messages).to include('本のタイトルを入力してください')
     end
 
     it 'book_nameが51文字以上の場合登録できないこと' do
       @post.book_name = 'あ' * 51
       @post.valid?
-      expect(@post.errors.full_messages).to include('Book name is too long (maximum is 50 characters)')
+      expect(@post.errors.full_messages).to include('本のタイトルは50文字以内で入力してください')
     end
 
     it 'category_idがない場合登録できないこと' do
       @post.category_id = nil
       @post.valid?
-      expect(@post.errors.full_messages).to include("Category can't be blank", 'Category is not a number')
+      expect(@post.errors.full_messages).to include('本のカテゴリーを入力してください', '本のカテゴリーは数値で入力してください')
     end
 
     it 'category_idが1の場合登録できないこと' do
       @post.category_id = '1'
       @post.valid?
-      expect(@post.errors.full_messages).to include('Category must be other than 1')
+      expect(@post.errors.full_messages).to include('本のカテゴリーは1以外の値にしてください')
     end
 
     it 'wrap_upがない場合登録できないこと' do
       @post.wrap_up = nil
       @post.valid?
-      expect(@post.errors.full_messages).to include("Wrap up can't be blank")
+      expect(@post.errors.full_messages).to include('要約文を入力してください')
     end
 
     it 'wrap_upが1001文字以上場合登録できないこと' do
       @post.wrap_up = 'a' * 1001
       @post.valid?
-      expect(@post.errors.full_messages).to include('Wrap up is too long (maximum is 1000 characters)')
+      expect(@post.errors.full_messages).to include('要約文は1000文字以内で入力してください')
     end
 
     it 'impressionsがない場合登録できないこと' do
       @post.impressions = nil
       @post.valid?
-      expect(@post.errors.full_messages).to include("Impressions can't be blank")
+      expect(@post.errors.full_messages).to include('感想文を入力してください')
     end
 
     it 'impressionsが1001文字以上場合登録できないこと' do
       @post.impressions = 'a' * 1001
       @post.valid?
-      expect(@post.errors.full_messages).to include('Impressions is too long (maximum is 1000 characters)')
+      expect(@post.errors.full_messages).to include('感想文は1000文字以内で入力してください')
     end
 
     it 'action_planがない場合登録できないこと' do
       @post.action_plan = nil
       @post.valid?
-      expect(@post.errors.full_messages).to include("Action plan can't be blank")
+      expect(@post.errors.full_messages).to include('アクションプランを入力してください')
     end
 
     it 'action_planが1001文字以上場合登録できないこと' do
       @post.action_plan = 'a' * 1001
       @post.valid?
-      expect(@post.errors.full_messages).to include('Action plan is too long (maximum is 1000 characters)')
+      expect(@post.errors.full_messages).to include('アクションプランは1000文字以内で入力してください')
     end
   end
 end

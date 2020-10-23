@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        name: ユーザーネーム
+      post:
+        text: テキスト
+        image: 本の表紙画像
+        book_name: 本のタイトル
+        category_id: 本のカテゴリー
+        wrap_up: 要約文
+        impressions: 感想文
+        action_plan: アクションプラン
