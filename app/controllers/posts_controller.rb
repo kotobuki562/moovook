@@ -26,7 +26,9 @@ class PostsController < ApplicationController
   end
 
   def edit
-    redirect_to action: :index if current_user.id != @post.user.id
+    if current_user.id != @post.user.id
+      redirect_to action: :index
+    end
   end
 
   def update
@@ -67,11 +69,15 @@ class PostsController < ApplicationController
   end
 
   def move_to_index
-    redirect_to action: :index unless user_signed_in?
+    unless user_signed_in?
+      redirect_to action: :index
+    end
   end
 
   def move_to_index_another_user
-    redirect_to action: :index if current_user.id != @post.user.id
+    if current_user.id != @post.user.id
+      redirect_to action: :index
+    end
   end
 
   def post_params
