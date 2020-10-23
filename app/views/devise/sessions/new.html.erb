@@ -27,6 +27,7 @@
       <h2 class="login-title">ログイン</h2>
 
       <%= form_with(model: @user, url: user_session_path ,method: :post, class: 'registration-main', local: true) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
 
         <div class="field-in">
           <p>メールアドレス</p>
