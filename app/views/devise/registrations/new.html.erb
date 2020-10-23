@@ -35,6 +35,23 @@
         <div class="actions">
           <%= f.submit "新規登録", class: "form__btn" %>
         </div>
+        
+        <%if @sns_id.present? %>
+            <%= hidden_field_tag :sns_auth, true %>
+          <% else %>
+            <div class="field">
+              <%= f.label :password %>
+              <% @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <br />
+              <%= f.password_field :password, autocomplete: "new-password" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :password_confirmation %><br />
+              <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+            </div>
+          <% end %>
       <% end %>
     </div>
     <div class="signup-or-login">
