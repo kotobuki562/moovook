@@ -1,5 +1,5 @@
 .form__text{
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+    transition: 0.5s;
     padding: 10px 10px;
     border-radius: 4px;
     border: 1px solid #aeaeae;
@@ -9,9 +9,12 @@
     height: 200px;
     color: #2a2a2a;
 }
+.form__text:hover{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
 
 .form__text__title{
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+    transition: 0.5s;
     padding: 10px 10px;
     border-radius: 4px;
     border: 1px solid #aeaeae;
@@ -19,6 +22,9 @@
     resize: none;
     width: 100%;
     color: #2a2a2a;
+}
+.form__text__title:hover{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
 .category-book{
