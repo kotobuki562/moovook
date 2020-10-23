@@ -69,6 +69,7 @@
   box-shadow: 5px 5px 5px 2px rgba(55, 164, 142, 0.5);
 }
 .show-book-image:hover{
+  padding: 40px;
   opacity: 1;
 }
 /* 要約・感想・アクションプラン文 */
@@ -84,6 +85,7 @@
   box-shadow: 5px 5px 5px 2px rgba(55, 164, 142, 0.5);
 }
 .text:hover{
+  padding: 30px 20px;
   opacity: 1;
 }
 .text-title{
