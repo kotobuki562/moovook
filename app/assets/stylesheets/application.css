@@ -85,14 +85,14 @@ body{
 
 /*ページネーション自体のデザイン*/
 .pagination>li>a {
-  opacity: 0.8;
+  opacity: 0.7;
   border: none;     /*枠線をなくす*/
   color: #f2efcd;  /*文字の色を変える*/
   margin: 10px;
   background-color: #72baac;
   box-shadow: 3px 3px 3px rgba(55, 164, 142, 0.4);
   padding: 10px;
-  transition: 0.2s;
+  transition: 0.5s;
 }
 
 /* 表示しているページ番号のデザイン */

@@ -18,15 +18,15 @@
       <%= image_tag(@post.image,size: '400x600',class: "book-image") %>
     </div>
 
-    <div>
+    <div class="post-user-name sub">
       <%= link_to @post.user.name, user_path(@post.user.id), method: :get %>
     </div>
 
-    <div>
+    <div class="post-category sub">
       <%= @post.category.name %>
     </div>
 
-    <div>
+    <div class="post-like-counter sub">
     <% if @post.likes.count == 0 %>
       <%= image_tag('book.png',size: '30x30') %>No Like!
     <% else %>

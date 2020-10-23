@@ -17,6 +17,7 @@
   text-decoration: none;
 }
 .btn-d{
+  transition: 0.5s;
   opacity: 0.8;
   font-size: 20px;
   margin: 5px 8px;
@@ -30,6 +31,7 @@
   opacity: 1;
 }
 .btn-e{
+  transition: 0.5s;
   opacity: 0.8;
   font-size: 20px;
   margin: 5px 8px;
@@ -72,6 +74,33 @@
   padding: 40px;
   opacity: 1;
 }
+
+.sub{
+  isolation: isolate;
+  transition: 0.5s;
+  font-size: 1.25rem;
+  padding: 5% 0;
+}
+.sub a{
+  transition: 0.5s;
+  color: #72baac;
+}
+.sub a:hover{
+  font-size: 1.5rem;
+  color: #D16E5B;
+}
+
+.post-category{
+  font-weight: 900;
+  color: #D16E5B;
+}
+.post-category:hover{
+  font-size: 1.5rem;
+}
+
+.post-like-counter{
+  color: #D16E5B;
+}
 /* 要約・感想・アクションプラン文 */
 .text{
   transition: 0.5s;
@@ -100,7 +129,7 @@
   width: 300px;
   height: 200px;
   background-color: #f2efcd;
-  color: #72baac;
+  color: #2a2a2a;
 }
 .limit-text{
   padding-left: 5%;
@@ -110,11 +139,20 @@
   margin: 20px 0;
 }
 .comments_list{
+  transition: 0.5s;
+  isolation: isolate;
   border-radius: 5px;
   background-color: #f2efcd;
-  padding: 10px 10px;
+  padding: 10px;
   margin: 10px 0;
   box-shadow: 2px 2px 2px 2px rgba(55, 164, 142, 0.5);
+  opacity: 0.8;
+}
+.comments_list:hover{
+  opacity: 1;
+  padding: 15px 10px;
+  margin: 20px 0;
+  background-color: #efe9b8;
 }
 .comment-user-name{
   display: flex;
@@ -131,7 +169,9 @@
   justify-content: center;
   padding-top: 5%;
 }
+
 .comment__btn{
+  isolation: isolate;
   transition: 0.5s;
   opacity: 0.8;
   margin-top: 20px;
@@ -144,6 +184,7 @@
 }
 .comment__btn:hover{
   opacity: 1;
+  padding: 15px;
 }
 .comment-text{
   color: #6a9f94;
