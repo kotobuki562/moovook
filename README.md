@@ -37,9 +37,25 @@ MooVooK を利用することで、継続した読書習慣を得られます。
 
 価値観を広げることで人間として成長を促します。
 
+# 使用言語・技術
+
+- Ruby '2.6.5'
+- Ruby on Rails '~> 6.0.0'
+- JavaScript
+- HTML/CSS
+- AWS(S3,EC2)
+- SQL2
+
+
 # デプロイ後の URL(未作成)
 
+http://54.95.252.97/
+
 # テスト用アカウント(未作成)
+
+name: テストユーザー1
+email: test@test.com
+password: aaa111
 
 # 利用方法(未実装)
 
@@ -102,7 +118,7 @@ has_many: likes
 has_many: comments
 
 image...ActiveStorage で実装
-audio...carrierweve で実装
+※保存先はS3
 
 ## いいね！機能
 
