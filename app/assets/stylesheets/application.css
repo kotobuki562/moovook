@@ -17,6 +17,8 @@
  */
 
  /* 共通事項 */
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 body{
   background-color: #f4f2e1;
