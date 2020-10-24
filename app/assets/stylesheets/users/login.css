@@ -44,6 +44,52 @@
   font-weight: 900;
   font-size: 1.25rem;
 }
+
+.sns-title{
+  padding: 10% 0 10%;
+  text-align: center;
+}
+
+.sns-btn{
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.form__btn__sns__f{
+    text-align: center;
+    isolation: isolate;
+    transition: 0.5s;
+    opacity: 0.8;
+    margin-top: 20px;
+    padding: 25px 15px 15px 15px;
+    border-radius: 50%;
+    background-color: #3b5998;
+    box-shadow: 3px 3px 3px 2px rgba(14, 4, 67, 0.5);
+}
+.form__btn__sns__f:hover{
+    opacity: 1;
+    padding: 30px 20px 20px 20px;
+}
+.form__btn__sns__g{
+    text-align: center;
+    isolation: isolate;
+    transition: 0.5s;
+    opacity: 0.8;
+    margin-top: 20px;
+    padding: 25px 15px 15px 15px;
+    border-radius: 50%;
+    background-color: #ea4335;
+    box-shadow: 3px 3px 3px 2px rgba(67, 4, 4, 0.5);
+}
+.form__btn__sns__g:hover{
+    opacity: 1;
+    padding: 30px 20px 20px 20px;
+}
+.fab{
+  color: #fff;
+  font-size: 30px;
+}
+
 .signup-or-login{
   padding: 5% 0;
   display: flex;
@@ -70,5 +116,8 @@
   }
   .login-title{
     font-size: 1.5rem;
+  }
+  .sns-title{
+  font-size: 1rem;
   }
 }
