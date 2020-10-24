@@ -41,9 +41,14 @@
 
         <div class="actions">
           <%= f.submit "ログイン",class: "form__btn" %>
-          <%= link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, method: :post%>
-          <%= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post%>
         </div>
+        
+
+        <div class="sns-btn">
+          <%= link_to 'Facebook', user_facebook_omniauth_authorize_path, method: :post, class: "form__btn__sns" %>
+          <%= link_to 'Google', user_google_oauth2_omniauth_authorize_path, method: :post, class: "form__btn__sns"%>
+        </div>
+
       </div>
     <% end %>
     <div class="signup-or-login">

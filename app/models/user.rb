@@ -4,7 +4,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
+          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
 
   with_options presence: true do
     validates :password, format: { with: VALID_PASSWORD_REGEX }
@@ -21,7 +21,7 @@ class User < ApplicationRecord
     # sns認証したことがあればアソシエーションで取得
     # 無ければemailでユーザー検索して取得orビルド(保存はしない)
     user = User.where(email: auth.info.email).first_or_initialize(
-      name: auth.info.name,
+        name: auth.info.name,
         email: auth.info.email
     )
     # userが登録済みの場合はそのままログインの処理へ行くので、ここでsnsのuser_idを更新しておく
