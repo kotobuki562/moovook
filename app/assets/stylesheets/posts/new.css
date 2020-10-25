@@ -10,6 +10,7 @@
     color: #2a2a2a;
 }
 .form__text:hover{
+    margin-bottom: 5px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
@@ -24,6 +25,7 @@
     color: #2a2a2a;
 }
 .form__text__title:hover{
+    margin-bottom: 5px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
