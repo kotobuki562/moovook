@@ -1,0 +1,22 @@
+version: '3'
+services:  
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: shusineko33
+  web:
+    build: .
+    command: bundle exec rails s -e production
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+  nginx:
+    build: containers/nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./public:/app/public
+      - ./tmp:/app/tmp
+    depends_on:
+      - web
