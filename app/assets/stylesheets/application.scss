@@ -71,6 +71,7 @@ body{
   flex-direction: column;
 }
 .flash{
+  isolation: isolate;
   padding: 10px 0px;
   margin: 0;
   color: #f2efcd;
@@ -78,6 +79,7 @@ body{
   text-align: center;
   background-color: #D16E5B;
 }
+
 .page-count{
   isolation: isolate;
   padding: 5% 0;

@@ -43,15 +43,15 @@
           <%= f.submit "ログイン",class: "form__btn" %>
         </div>
         
-        <h2 class="sns-title">SNSアカウントをご利用ですか？</h2>
+        <%# <h2 class="sns-title">SNSアカウントをご利用ですか？</h2>
         <div class="sns-btn">
           <div>
             <%= link_to content_tag(:i, '', class:"fab fa-facebook-square"), user_facebook_omniauth_authorize_path, method: :post, class: "form__btn__sns__f" %>
-          </div>
+          <%# </div>
           <div>
             <%= link_to content_tag(:i, '', class:"fab fa-google"), user_google_oauth2_omniauth_authorize_path, method: :post, class: "form__btn__sns__g"%>
-          </div>
-        </div>
+          <%# </div>
+        </div>  %>
 
       </div>
     <% end %>
