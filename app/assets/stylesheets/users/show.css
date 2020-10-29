@@ -1,15 +1,26 @@
 .user-posts{
   isolation: isolate;
-  color: #72baac;
+  color: #f4f2e1;
   text-align: center;
-  padding-top: 10%;
+  margin-top: 10%;
+  transition: 0.5s;
+  background-color: #D16E5B;
+  font-size: 2rem;
+  opacity: 0.8;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+.user-posts:hover{
+  opacity: 1;
 }
 .string-length{
   color: #D16E5B;
   font-size: 0.75rem;
 }
+
+
 @media(max-width:600px){
   .user-posts{
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }

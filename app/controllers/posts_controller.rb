@@ -4,6 +4,9 @@ class PostsController < ApplicationController
   before_action :move_to_index_another_user, only: [:edit, :update, :destroy]
 
   def index
+    unless user_signed_in?
+      flash[:notice] = 'ようこそ！ログインはお済みですか？'
+    end
     @posts = Post.includes(:user).order('created_at DESC').page(params[:page]).per(6)
   end
 
