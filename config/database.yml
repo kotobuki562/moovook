@@ -1,4 +1,22 @@
 # MySQL. Versions 5.5.8 and up are supported.
+# default: &default
+#   adapter: mysql2
+#   encoding: utf8
+#   pool: 5
+#   username: root
+#   password: password
+
+# development:
+#   <<: *default
+#   host: db
+#   database: docker_development
+
+# default: &default
+#   adapter: mysql2
+#   encoding: utf8
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#   username: root
+#   password: password
 #
 # Install the MySQL driver
 #   gem install mysql2
@@ -12,9 +30,9 @@
 default: &default
   adapter: mysql2
   encoding: utf8
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: 5
   username: root
-  password:
+  password: password
   # socket: /tmp/mysql.sock
 
 development:
