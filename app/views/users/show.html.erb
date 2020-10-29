@@ -1,6 +1,6 @@
 <%= render 'shared/header' %>
 <div class="wrap">
-  <h1 class="user-posts"><%= @user.name %>さんの投稿一覧</h1>
+  <p class="user-posts"><%= @user.name %>さんの投稿一覧</p>
   <ul class="contents">
   <% @posts.each do |post| %>
     <li class="content darkmode-ignore" id="post_<%= post.id %>">
@@ -12,7 +12,7 @@
     <%= paginate @posts %>
   </div>
 
-  <h1 class="user-posts"><%= @user.name %>さんのBook Like一覧</h1>
+  <p class="user-posts"><%= @user.name %>さんのBook Like一覧</p>
   <ul class="contents">
     <% @likes.each do |like| %>
       <% post = Post.find_by(id: like.post_id) %>
