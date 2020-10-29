@@ -44,7 +44,8 @@ MooVooK を利用することで、継続した読書習慣を得られます。
 - JavaScript
 - HTML/CSS
 - AWS(S3,EC2)
-- SQL2
+- Docker
+- SQL
 
 
 # デプロイ後の URL
