@@ -3,7 +3,7 @@ services:
   db:
     image: mysql:5.5
     environment:
-      MYSQL_ROOT_PASSWORD: password #適宜自分のMySQLのパスワードにしてください
+      MYSQL_ROOT_PASSWORD:  #適宜自分のMySQLのパスワードにしてください
   web:
     build: .
     command: bundle exec rails s -e production
