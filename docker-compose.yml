@@ -12,7 +12,6 @@ services:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_USER: root
       MYSQL_PASSWORD: password
-
   web:
     build:
       context: .
@@ -27,3 +26,28 @@ services:
       - "3000:3000"
     volumes:
       - .:/myproject
+
+
+
+# version: '3'
+# services:  
+#   db:
+#     image: mysql:5.7
+#     environment:
+#       MYSQL_ROOT_PASSWORD: password #適宜自分のMySQLのパスワードにしてください
+#   web:
+#     build: .
+#     command: bundle exec rails s -p 80 -b '0.0.0.0'
+#     volumes:
+#       - .:/app
+#     depends_on:
+#       - db
+#   nginx:
+#     build: containers/nginx
+#     ports:
+#       - "80:80"
+#     volumes:
+#       - ./public:/app/public
+#       - ./tmp:/app/tmp
+#     depends_on:
+#       - web
