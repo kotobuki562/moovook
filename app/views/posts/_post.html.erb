@@ -1,5 +1,5 @@
 
-<%= link_to image_tag(post.image,size: '180x250'), post_path(post.id),method: :get %>
+<%= image_tag(post.image,size: '180x250') %>
 
 <div class="book-name">
   <%= link_to post.book_name, post_path(post.id), method: :get %>
@@ -13,6 +13,10 @@
   <%= image_tag('man.png',size: '20x20') %>
   <%= link_to post.user.name, user_path(post.user.id),method: :get  %>
   <%= image_tag('woman.png',size: '20x20') %>
+</div>
+
+<div class="more-btn">
+  <%= link_to "More", post_path(post.id),method: :get %>
 </div>
 
 <% if user_signed_in? %>
