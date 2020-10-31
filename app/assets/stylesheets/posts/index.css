@@ -44,6 +44,19 @@
 .user-name a{
   color: #f2efcd;
 }
+
+.more-btn{
+  padding: 5% 0;
+}
+.more-btn a{
+  background-color: #f2efcd;
+  padding: 3% 5%;
+  color: #72baac;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
 .category-name{
   padding: 3%;
   font-size: 0.85rem;
