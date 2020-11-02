@@ -270,6 +270,13 @@ GEM
       execjs
       railties (>= 3.2)
       tilt
+    react_on_rails (12.0.3)
+      addressable
+      connection_pool
+      execjs (~> 2.5)
+      rails (>= 3.2)
+      rainbow (~> 3.0)
+      webpacker (>= 4.0)
     regexp_parser (1.8.2)
     responders (3.0.1)
       actionpack (>= 5.0)
@@ -405,6 +412,7 @@ DEPENDENCIES
   rails (~> 6.0.0)
   rails-i18n
   react-rails
+  react_on_rails
   rspec-rails (~> 4.0.0)
   rubocop
   sass-rails (~> 5)

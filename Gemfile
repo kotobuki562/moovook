@@ -67,7 +67,6 @@ gem 'devise'
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
 gem 'active_hash'
-gem 'react-rails'
 group :production do
   # gem 'rails_12factor'
   gem 'unicorn', '5.4.1'
@@ -79,3 +78,5 @@ gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem "omniauth-rails_csrf_protection"
 gem 'font-awesome-sass', '~> 5.15.1'
+gem 'react-rails'
+gem "react_on_rails"
