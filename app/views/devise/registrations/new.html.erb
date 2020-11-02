@@ -13,12 +13,12 @@
         <%= render "devise/shared/error_messages", resource: resource %>
         <div class="signup-user-form-contents">
           <div class="field-in">
-            <p>お名前</p>
+            <label for="user_name">お名前</label>
             <%= f.text_field :name, autofocus: true, placeholder:"10文字以内", autocomplete: "name", class: :signup_user_form_content %>
           </div>
 
           <div class="field-in">
-            <p>登録用メールアドレス</p>
+            <label for="user_email">登録用メールアドレス</label>
             <%= f.email_field :email, autofocus: true, placeholder:"PC・携帯どちらでも可", autocomplete: "email", class: :signup_user_form_content %>
           </div>
           
@@ -26,11 +26,11 @@
             <%= hidden_field_tag :sns_auth, true %>
           <% else %>
           <div class="field-in">
-            <p>パスワード</p>
+            <label for="user_password">パスワード</label>
             <%= f.password_field :password, placeholder:"小文字英数字混合でご入力ください", autocomplete: "new-password", class: :signup_user_form_content %>
           </div>
           <div class="field-in">
-            <p>確認用パスワード</p>
+            <label for="user_password_confirmation">確認用パスワード</label>
             <%= f.password_field :password_confirmation, placeholder:"確認用", autocomplete: "new-password", class: :signup_user_form_content %>
           </div>
           <% end %>

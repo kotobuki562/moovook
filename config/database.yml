@@ -32,12 +32,12 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password: password
+  # password: password #Docker起動時コメントアウト解除
   socket: /tmp/mysql.sock
 
 development:
   <<: *default
-  host: db
+  # host: db #Docker起動時コメントアウト解除
   database: moovook_development
   # socket: /tmp/mysql.sock
   # password: password
