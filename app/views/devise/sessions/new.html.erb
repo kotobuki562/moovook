@@ -32,12 +32,12 @@
       <%= render "devise/shared/error_messages", resource: resource %>
 
         <div class="field-in">
-          <p>メールアドレス</p>
+          <label for="user_email">メールアドレス</label>
           <%= f.email_field :email, autofocus: true, autocomplete: "email", class: :signup_user_form_content %>
         </div>
 
         <div class="field-in">
-          <p>パスワード</p>
+          <label for="user_password">パスワード</label>
           <%= f.password_field :password, autocomplete: "current-password", class: :signup_user_form_content %>
         </div>
 
