@@ -11,5 +11,6 @@
 <div class="page-count">
   <%= paginate @posts %>
 </div>
-<%= react_component("my_subdirectory/HelloWorld", { greeting: "Hello from react-rails." }) %>
+<%= react_component('HelloMessage', name: 'Mike') %>
+<%# <%= react_component("my_subdirectory/HelloWorld", { greeting: "Hello from react-rails." }) %> %>
 <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
