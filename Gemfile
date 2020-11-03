@@ -79,3 +79,5 @@ gem 'omniauth-google-oauth2'
 gem "omniauth-rails_csrf_protection"
 gem 'font-awesome-sass', '~> 5.15.1'
 gem "react_on_rails", "= 12.0"
+
+gem 'mini_racer', platforms: :ruby
