@@ -33,7 +33,7 @@ default: &default
   pool: 5
   username: root
   # password: password #Docker起動時コメントアウト解除
-  socket: /tmp/mysql.sock
+  # socket: /tmp/mysql.sock
 
 development:
   <<: *default

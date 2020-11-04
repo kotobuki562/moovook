@@ -19,9 +19,10 @@
  /* 共通事項 */
 @import "font-awesome-sprockets";
 @import "font-awesome";
-
 body{
   background-color: #f4f2e1;
+  margin: 0;
+  padding: 0;
 }
 .darkmode-toggle{
   z-index: 5;
