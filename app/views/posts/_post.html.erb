@@ -20,15 +20,15 @@
 </div>
 
 <% if user_signed_in? %>
-<div class="like-form">
-  <% if current_user.liked_by?(post.id) %>
-    <td><%= link_to image_tag('open-book.png',size: '50x50'), destroy_like_path(post), method: :DELETE, remote: true %></td>
-    <div><%= post.likes.count %>Likes</div>
-    <div>Book Like!</div>
-  <% else %>
-    <td><%= link_to image_tag('book.png',size: '50x50'), create_like_path(post), method: :POST,remote: true %></td>
-    <div><%= post.likes.count %>Likes</div>
-    <div>Close!</div>
-  <% end %>
-</div>
+  <div class="like-form">
+    <% if current_user.liked_by?(post.id) %>
+      <td><%= link_to image_tag('open-book.png',size: '50x50'), destroy_like_path(post), method: :DELETE, remote: true %></td>
+      <div><%= post.likes.count %>Likes</div>
+      <div>Book Like!</div>
+    <% else %>
+      <td><%= link_to image_tag('book.png',size: '50x50'), create_like_path(post), method: :POST,remote: true %></td>
+      <div><%= post.likes.count %>Likes</div>
+      <div>Close!</div>
+    <% end %>
+  </div>
 <% end %>

@@ -64,3 +64,14 @@
 .like-form{
   padding-bottom: 0.85rem;
 }
+@media(max-width:600px){
+  .user-name{
+    display: none;
+  }
+  .category-name{
+    display: none;
+  }
+  .book-name{
+    display: none;
+  }
+}
