@@ -177,3 +177,19 @@ Dockerの場合
 % docker-compose build
 % docker-compose up
 ```
+
+アプリ起動
+
+```terminal
+#moovookをクローン
+% git clone https://github.com/kotobuki562/moovook.git
+
+#moovookディレクトリに移動
+% cd moovook
+
+% bundle install
+% npm install
+% rails db:create
+% rails db:migrate
+% rails s
+```
