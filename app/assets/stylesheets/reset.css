@@ -33,3 +33,6 @@ a {
   text-decoration: none;
   color: #3b4043;
 }
+a:hover{
+  text-decoration: none;
+}
