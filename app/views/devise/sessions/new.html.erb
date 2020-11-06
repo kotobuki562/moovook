@@ -1,11 +1,11 @@
 <body class="top2">
+  <div class="sign-header" id="root">
+    <%=javascript_pack_tag 'index'%>
+  </div>
   <div class="wrap">
     
     
     <div class="introduces">
-      <div class="logo-top-login">
-      <%= link_to(image_tag('logo.png',width:"300px",class:"introduce-logo"),root_path) %>
-      </div>
 
       <div class="introduce">
         <img src="/images/book-login.png" class="top-image book-image">
@@ -57,9 +57,6 @@
 
       </div>
     <% end %>
-    <div class="signup-or-login">
-      <%= link_to "アカウントはお持ちですか？", new_user_registration_path, class:"to-signin" %>
-    </div>
   </div>
 </body>
 

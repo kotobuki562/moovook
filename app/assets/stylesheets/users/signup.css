@@ -35,11 +35,6 @@
   background-color: rgba(62, 62, 62, 0.6);
 }
 
-.to-login{
-  color: azure;
-  font-size: 1.75rem;
-}
-
 @media(max-width:600px){
   .to-login{
     font-size: 1rem;
