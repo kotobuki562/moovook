@@ -42,6 +42,7 @@ MooVooK を利用することで、継続した読書習慣を得られます。
 - Ruby '2.6.5'
 - Ruby on Rails '~> 6.0.0'
 - JavaScript
+- React.js
 - HTML/CSS
 - AWS(S3,EC2)
 - Docker
