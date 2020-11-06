@@ -11,6 +11,19 @@
   margin-left: auto;
   margin-right: auto;
 }
+.slide-show{
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+  opacity: 0.8;
+}
+.slide-show:hover{
+  opacity: 1;
+}
+.Slide {
+  font-family: sans-serif;
+  text-align: center;
+}
+
 .introduces{
   flex-direction: column;
   display: flex;
