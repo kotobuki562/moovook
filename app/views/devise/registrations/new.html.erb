@@ -1,4 +1,7 @@
 <body class="top">
+  <div class="sign-header" id="root">
+    <%=javascript_pack_tag 'index'%>
+  </div>
   <div class="wrap">
   
     <div class="introduces">
@@ -40,9 +43,6 @@
           <%= f.submit "新規登録", class: "form__btn" %>
         </div>
       <% end %>
-    </div>
-    <div class="signup-or-login">
-      <%= link_to "ログインはこちら", new_user_session_path, class:"to-login" %>
     </div>
   </div>
 </body>
