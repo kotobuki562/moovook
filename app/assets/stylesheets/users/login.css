@@ -12,7 +12,8 @@
   margin-right: auto;
 }
 .slide-show{
-  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
   transition: 0.5s;
   opacity: 0.8;
 }
@@ -27,7 +28,7 @@
 .introduces{
   flex-direction: column;
   display: flex;
-  padding:5% 5%;
+  padding:10% 5%;
 }
 .introduce{
   display: flex;

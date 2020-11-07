@@ -65,7 +65,7 @@ const useStyles = makeStyles(() => {
       width: "70%"
     },
     cardContent: {
-      textAlign: "left"
+      textAlign: "center"
     }
   };
 });
@@ -77,7 +77,10 @@ const Swipe = () => {
   const items = [bookLogin, commentLogin, likeLogin];
   const itemInitial = ["M", "V", "K"];
   const itemNames = ["MooVooKとは", "コメント", "Book Like"];
-  const itemText = ["aaaaaaaaaaa","bbbbbbbbb","cccccccccc"];
+  const itemText = [
+    "MooVooKは本の要約と本から学んだ事を他者と共有するサービスです。読んだ本の内容をアウトプットし、人生に生かそう。",
+    "投稿にコメントを残して、コミュニケーション。",
+    "気に入った投稿があれば、「Book Like」しよう。マイページに行けばいつでも開けます。"];
   const itemOfficialNames = [
     "MooVooKって何？？",
     "投稿にコメントを残そう！",
