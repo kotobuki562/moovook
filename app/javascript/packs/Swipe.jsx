@@ -62,7 +62,7 @@ const useStyles = makeStyles(() => {
     },
     card: {
       margin: "0 auto",
-      width: "70%"
+      width: "100%"
     },
     cardContent: {
       textAlign: "center"
