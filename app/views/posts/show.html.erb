@@ -28,9 +28,9 @@
 
     <div class="post-like-counter sub">
     <% if @post.likes.count == 0 %>
-      <%= image_tag('book.png',size: '30x30') %>No Like!
+      <%= image_tag('book.svg',size: '30x30') %>No Like!
     <% else %>
-      <%= image_tag('open-book.png',size: '30x30') %><%= @post.likes.count %><span class="count-like">Book Likes!</span>
+      <%= image_tag('open-book.svg',size: '30x30') %><%= @post.likes.count %><span class="count-like">Book Likes!</span>
     <% end %>
     </div>
 
