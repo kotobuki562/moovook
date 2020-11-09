@@ -10,9 +10,9 @@
 </div>
 
 <div class="user-name">
-  <%= image_tag('man.png',size: '20x20') %>
+  <%= image_tag('man.svg',size: '30x30') %>
   <%= link_to post.user.name, user_path(post.user.id),method: :get  %>
-  <%= image_tag('woman.png',size: '20x20') %>
+  <%= image_tag('woman.svg',size: '30x30') %>
 </div>
 
 <div class="more-btn">
@@ -22,11 +22,11 @@
 <% if user_signed_in? %>
   <div class="like-form">
     <% if current_user.liked_by?(post.id) %>
-      <td><%= link_to image_tag('open-book.png',size: '50x50'), destroy_like_path(post), method: :DELETE, remote: true %></td>
+      <td><%= link_to image_tag('open-book.svg',size: '50x50'), destroy_like_path(post), method: :DELETE, remote: true %></td>
       <div><%= post.likes.count %>Likes</div>
       <div>Book Like!</div>
     <% else %>
-      <td><%= link_to image_tag('book.png',size: '50x50'), create_like_path(post), method: :POST,remote: true %></td>
+      <td><%= link_to image_tag('book.svg',size: '50x50'), create_like_path(post), method: :POST,remote: true %></td>
       <div><%= post.likes.count %>Likes</div>
       <div>Close!</div>
     <% end %>
