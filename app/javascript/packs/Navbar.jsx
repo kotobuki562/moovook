@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FaBars, FaTwitter } from "react-icons/fa";
 import { links, social } from "./data";
-import logo from "./logo3.svg";
+import logo from "./logo4.svg";
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
