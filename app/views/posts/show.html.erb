@@ -70,9 +70,9 @@
         <% @comments.each do |comment| %>
           <li class="comments_list" id=<%= comment.id %>>
             <span class="comment-user-name">
-              <%= image_tag('man.png',size: '20x20') %>
+              <%= image_tag('man.svg',size: '20x20') %>
               <%= link_to(comment.user.name, user_path(comment.user.id)) %>
-              <%= image_tag('woman.png',size: '20x20') %>
+              <%= image_tag('woman.svg',size: '20x20') %>
             </span>
             <div class="comment-text darkmode-ignore">
               <%= comment.text %>
