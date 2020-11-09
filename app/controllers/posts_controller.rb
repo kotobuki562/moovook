@@ -7,7 +7,7 @@ class PostsController < ApplicationController
     unless user_signed_in?
       flash[:notice] = 'ようこそ！ログインはお済みですか？'
     end
-    @posts = Post.includes(:user).order('created_at DESC').page(params[:page]).per(6)
+    @posts = Post.includes(:user).order('created_at DESC').page(params[:page]).per(4)
   end
 
   def new
