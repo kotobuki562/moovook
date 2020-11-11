@@ -39,8 +39,8 @@ MooVooK を利用することで、継続した読書習慣を得られます。
 
 # 使用言語・技術
 
-- Ruby '2.6.5'
-- Ruby on Rails '~> 6.0.0'
+- Ruby
+- Ruby on Rails
 - JavaScript
 - React.js
 - HTML/CSS
@@ -59,7 +59,19 @@ http://3.218.222.1/
 - email: test@test.com
 - password: aaa111
 
+## DEMO
+## トップ画面
+|ログイン前|ログイン後|
+|---|---|
+|![localhost_3000_](https://user-images.githubusercontent.com/67810971/98797143-89eda000-244f-11eb-90e9-ae62ee49e597.png)|![after_sign_in](https://user-images.githubusercontent.com/67810971/98798563-5c095b00-2451-11eb-94e0-c7b730e8cf95.jpg)|
+
+## ユーザー新規登録画面
+|ログイン|新規登録|
+|---|---|
+|![login](https://user-images.githubusercontent.com/67810971/98800125-4f860200-2453-11eb-8e46-18fdce453a4c.png)|![localhost_3000_signups_step2](https://user-images.githubusercontent.com/67810971/98798313-18165600-2451-11eb-9c72-ec406dae2609.jpg)|
+
 # 利用方法
+
 
 1.アクセスするとトップページに遷移
 2.ヘッダーの「ようこそ！ログインはお済みですか？」をクリック or 「ログインページ」をクリック
