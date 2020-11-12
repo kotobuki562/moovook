@@ -67,7 +67,7 @@ http://3.218.222.1/
 
 ## ユーザー新規登録画面
 |ログイン|新規登録|
-|---|---|---|
+|---|---|
 |![login](https://user-images.githubusercontent.com/67810971/98883199-76831900-24d1-11eb-91b3-f9af42167533.png)|![localhost_3000_signups_step2](https://user-images.githubusercontent.com/67810971/98883307-7edb5400-24d1-11eb-92fc-c1c7e0581fc3.png)|
 
 # 利用方法
