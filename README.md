@@ -73,11 +73,11 @@ http://3.218.222.1/
 ## マイページ
 |お気に入り|お気に入り解除|マイページ|
 |---|---|---|
-|![Like](https://user-images.githubusercontent.com/67810971/98901344-fb345e00-24f6-11eb-9c69-e30705040fdd.png)|![no_like](https://user-images.githubusercontent.com/67810971/98883307-7edb5400-24d1-11eb-92fc-c1c7e0581fc3.png)|![my_page](https://user-images.githubusercontent.com/67810971/98900993-469a3c80-24f6-11eb-8181-031a24489552.png)|
+|![Like](https://user-images.githubusercontent.com/67810971/98901344-fb345e00-24f6-11eb-9c69-e30705040fdd.png)|![no_like](https://user-images.githubusercontent.com/67810971/98884097-a1ba3800-24d2-11eb-88dd-172fade8c1be.png)|![my_page](https://user-images.githubusercontent.com/67810971/98900993-469a3c80-24f6-11eb-8181-031a24489552.png)|
 
 ## コメント機能
 |コメントあり|コメントなし|
-|---|---|---|
+|---|---|
 |![comment](https://user-images.githubusercontent.com/67810971/98902349-e5c03380-24f8-11eb-9265-19099319a93d.png)|![no_comment](https://user-images.githubusercontent.com/67810971/98902332-dc36cb80-24f8-11eb-97e9-3513a1873851.png)|
 
 # 利用方法
