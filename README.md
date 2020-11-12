@@ -61,14 +61,14 @@ http://3.218.222.1/
 
 ## DEMO
 ## トップ画面
-|ログイン前|ログイン後|
-|---|---|
-|![localhost_3000_](https://user-images.githubusercontent.com/67810971/98797143-89eda000-244f-11eb-90e9-ae62ee49e597.png)|![after_sign_in](https://user-images.githubusercontent.com/67810971/98798563-5c095b00-2451-11eb-94e0-c7b730e8cf95.jpg)|
+|ログイン前|ログイン後|ダークモード起動|
+|---|---|---|
+|![localhost_3000_](https://user-images.githubusercontent.com/67810971/98883943-67e93180-24d2-11eb-86e2-8af43e7f18a2.png)|![after_sign_in](https://user-images.githubusercontent.com/67810971/98884097-a1ba3800-24d2-11eb-88dd-172fade8c1be.png)|![darkmode](https://user-images.githubusercontent.com/67810971/98884385-39b82180-24d3-11eb-8d3a-f537ef827570.png)|
 
 ## ユーザー新規登録画面
 |ログイン|新規登録|
-|---|---|
-|![login](https://user-images.githubusercontent.com/67810971/98800125-4f860200-2453-11eb-8e46-18fdce453a4c.png)|![localhost_3000_signups_step2](https://user-images.githubusercontent.com/67810971/98798313-18165600-2451-11eb-9c72-ec406dae2609.jpg)|
+|---|---|---|
+|![login](https://user-images.githubusercontent.com/67810971/98883199-76831900-24d1-11eb-91b3-f9af42167533.png)|![localhost_3000_signups_step2](https://user-images.githubusercontent.com/67810971/98883307-7edb5400-24d1-11eb-92fc-c1c7e0581fc3.png)|
 
 # 利用方法
 
