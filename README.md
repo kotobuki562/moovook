@@ -68,7 +68,17 @@ http://3.218.222.1/
 ## ユーザー新規登録画面
 |ログイン|新規登録|
 |---|---|
-|![login](https://user-images.githubusercontent.com/67810971/98883199-76831900-24d1-11eb-91b3-f9af42167533.png)|![localhost_3000_signups_step2](https://user-images.githubusercontent.com/67810971/98883307-7edb5400-24d1-11eb-92fc-c1c7e0581fc3.png)|
+|![login](https://user-images.githubusercontent.com/67810971/98883199-76831900-24d1-11eb-91b3-f9af42167533.png)|![signin](https://user-images.githubusercontent.com/67810971/98883307-7edb5400-24d1-11eb-92fc-c1c7e0581fc3.png)|
+
+## マイページ
+|お気に入り|お気に入り解除|マイページ|
+|---|---|---|
+|![Like](https://user-images.githubusercontent.com/67810971/98901344-fb345e00-24f6-11eb-9c69-e30705040fdd.png)|![no_like](https://user-images.githubusercontent.com/67810971/98883307-7edb5400-24d1-11eb-92fc-c1c7e0581fc3.png)|![my_page](https://user-images.githubusercontent.com/67810971/98900993-469a3c80-24f6-11eb-8181-031a24489552.png)|
+
+## コメント機能
+|コメントあり|コメントなし|
+|---|---|---|
+|![comment](https://user-images.githubusercontent.com/67810971/98902349-e5c03380-24f8-11eb-9265-19099319a93d.png)|![no_comment](https://user-images.githubusercontent.com/67810971/98902332-dc36cb80-24f8-11eb-97e9-3513a1873851.png)|
 
 # 利用方法
 
@@ -111,14 +121,6 @@ http://3.218.222.1/
 - 欲しい本があるが、どんな内容なのか少しでも情報収集したい
 - 本を読む時間がないの音声ファイルなどで本の要約を聞きたい
 
-# 実装予定の機能
-
-- ユーザー管理機能(ログイン/ログアウト/マイページ)
-- 本の要約投稿機能(書籍タイトル/要約文/カテゴリー/感想/アクションプラン/音声での要約読み上げ(音声ファイル付き))
-- 投稿内容の編集/削除
-- 投稿内容の評価機能(いいね！機能、非同期対応)MyPageで一覧確認
-- 各投稿にコメントできる機能(非同期)
-
 # データベース設計
 
 ## ユーザー管理機能
@@ -146,7 +148,7 @@ has_many: comments
 | wrap_up         | text          | nill: false                   |
 | impressions     | text          | nill: false                   |
 | action_plan     | text          | nill: false                   |
-| --------------- | ------------- | ------------                  |
+| --------------- | ------------- | ----------------------------- |
 | user            | references    | nill: false,foreign_key: true |
 
 belongs_to: user
@@ -175,7 +177,7 @@ belongs_to: post
 | Column          | Type          | Options                       |
 | --------------- | ------------- | ----------------------------- |
 | comment         | texr          | nill: false                   |
-| --------------- | ------------- | ------------                  |
+| --------------- | ------------- | ----------------------------- |
 | user            | references    | nill: false,foreign_key: true |
 | post            | references    | nill: false,foreign_key: true |
 
@@ -184,28 +186,13 @@ belongs_to: post
 
 # ローカルでの動作方法(未実装)
 
-Dockerの場合
+Docker起動
 
 ```CLI
 % docker-compose build
 % docker-compose up
 ```
 
-アプリ起動
-
-```terminal
-#moovookをクローン
-% git clone https://github.com/kotobuki562/moovook.git
-
-#moovookディレクトリに移動
-% cd moovook
-
-% bundle install
-% npm install
-% rails db:create
-% rails db:migrate
-% rails s
-```
 
 #使用アイコン提供元
 
