@@ -34,7 +34,7 @@ default: &default
   username: root
   password: password
   socket: /tmp/mysql.sock
-
+  # host: db #Docker起動時コメントアウト解除
 # default: &default
 #   adapter: mysql2
 #   encoding: utf8
@@ -45,7 +45,6 @@ default: &default
 
 development:
   <<: *default
-  host: db #Docker起動時コメントアウト解除
   database: moovook_development
   # socket: /tmp/mysql.sock
   # password: password

@@ -26,12 +26,4 @@ class Post < ApplicationRecord
       Post.all.order('created_at DESC')
     end
   end
-
-  # def self.search_category(search_category)
-  #   if search_category != "---"
-  #     Post.where('category_id.name LIKE(?)', "%#{search_category}%")
-  #   else
-  #     Post.all.order('created_at DESC')
-  #   end
-  # end
 end

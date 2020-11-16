@@ -57,10 +57,6 @@ class PostsController < ApplicationController
     @post = Post.includes(:user).order('created_at DESC')
   end
 
-  # def search_category
-  #   @posts = Post.search(params[:keyword])
-  #   @post = Post.includes(:user).order('created_at DESC')
-  # end
 
   private
 
